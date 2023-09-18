@@ -1,5 +1,5 @@
 <?php
-function selectCards() {
+function selectCard() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("")
