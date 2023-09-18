@@ -20,7 +20,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Card.php">Card</a>
+          <a class="nav-link" href="card.php">Card</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Pack.php">Pack</a>
