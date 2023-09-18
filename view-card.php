@@ -4,8 +4,10 @@
     <thead>
       
       <tr>
+        <th>SetID</th>  
   <th>Card Number</th>
-   <th>Card Name</th>     
+   <th>Card Name</th>  
+        <th>Card Type</th> 
       </tr>
       
     </thead>
@@ -15,9 +17,11 @@ while($card = $cards->fetch_assoc())
 {
 ?>
 <tr>
+  <td><?php echo $card['setID'];?></td>
   <td><?php echo $card['cardnumber'];?></td>
   <td><?php echo $card['cardname'];?></td>
-  <td></td>
+  <td><?php echo $card['cardtype'];?></td>
+  
   
 </tr>
 
