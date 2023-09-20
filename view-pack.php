@@ -6,6 +6,7 @@
       <tr>
         <th>PackID</th>  
   <th>Pack Name</th>
+        <th>Pack Type</th>
    <th>Release Date</th>  
       
       </tr>
@@ -19,6 +20,7 @@ while($pack = $packs->fetch_assoc())
 <tr>
   <td><?php echo $pack['packID'];?></td>
   <td><?php echo $pack['packname'];?></td>
+   <td><?php echo $pack['packType'];?></td>
   <td><?php echo $pack['releasedate'];?></td>
 
   
