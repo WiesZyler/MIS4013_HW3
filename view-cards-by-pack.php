@@ -1,5 +1,5 @@
 <h1>Cards By Pack</h1>
-<?php while($pack = $packs->fetch_assoc())
+<?php if($pack = $packs->fetch_assoc())
 {?>
 <h2><?php echo $pack['packname'] . ' (' . $pack['packID'] . ') ' . $pack['releasedate']; ?></h2>
  <?php
