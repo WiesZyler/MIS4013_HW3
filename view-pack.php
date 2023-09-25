@@ -8,7 +8,7 @@
   <th>Pack Name</th>
         <th>Pack Type</th>
    <th>Release Date</th>  
-      
+      <th></th>
       </tr>
       
     </thead>
@@ -22,7 +22,7 @@ while($pack = $packs->fetch_assoc())
   <td><?php echo $pack['packname'];?></td>
    <td><?php echo $pack['packType'];?></td>
   <td><?php echo $pack['releasedate'];?></td>
-
+<td><a href="cards-by-pack.php?id=<?php echo $pack['packID'];?>">Cards</a></td>
   
 </tr>
 
