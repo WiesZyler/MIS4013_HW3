@@ -26,7 +26,7 @@ while($pack = $packs->fetch_assoc())
   <td><?php echo $pack['releasedate'];?></td>
   <td><?php echo $pack['cardname'];?></td>
   <td><?php echo $pack['cardnumber'];?></td>
-   <td><?php echo $pack['cardType'];?></td>
+   <td><?php echo $pack['cardtype'];?></td>
   
 </tr>
 
