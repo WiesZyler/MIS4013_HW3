@@ -26,7 +26,7 @@
           <a class="nav-link" href="pack.php">Pack</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Packs-With-Cards.php">Packs With Cards</a>
+          <a class="nav-link" href="card-by-pack.php">Cards by Pack</a>
         </li>
       </ul>
     </div>
