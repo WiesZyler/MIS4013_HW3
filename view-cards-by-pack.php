@@ -1,4 +1,5 @@
 <h1>Cards By Pack</h1>
+<h2> <?php echo $pack['packname'];?> (<?php echo $pack['packID'];?></td><td>), <?php echo $pack['releasedate'];?></h2>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -20,10 +21,7 @@ while($pack = $packs->fetch_assoc())
 {
 ?>
 <tr>
-  <td><?php echo $pack['packID'];?></td>
-  <td><?php echo $pack['packname'];?></td>
-   <td><?php echo $pack['packType'];?></td>
-  <td><?php echo $pack['releasedate'];?></td>
+ 
   <td><?php echo $pack['cardname'];?></td>
   <td><?php echo $pack['cardnumber'];?></td>
    <td><?php echo $pack['cardtype'];?></td>
