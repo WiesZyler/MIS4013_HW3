@@ -1,4 +1,4 @@
-<h1>Cards By Instructor</h1>
+<h1>Cards By Pack</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
