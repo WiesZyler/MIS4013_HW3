@@ -10,10 +10,6 @@
     <thead>
       
       <tr>
-        <th>PackID</th>  
-        <th>Pack Name</th>
-        <th>Pack Type</th>
-        <th>Release Date</th>  
         <th>Card Name</th>  
         <th>Card Number</th>
         <th>Card Type</th>
