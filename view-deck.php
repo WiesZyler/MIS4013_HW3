@@ -16,9 +16,9 @@ while($deck = $decks->fetch_assoc())
 {
 ?>
 <tr>
-  <td><?php echo $card['deckID'];?></td>
-  <td><?php echo $card['deckname'];?></td>
-  <td><?php echo $card['duelistname'];?></td>
+  <td><?php echo $deck['deckID'];?></td>
+  <td><?php echo $deck['deckname'];?></td>
+  <td><?php echo $deck['duelistname'];?></td>
   
   
 </tr>
