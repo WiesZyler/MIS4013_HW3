@@ -23,7 +23,7 @@ while($deck = $decks->fetch_assoc())
   <td>
     <form method="post" action="decks-with-cards.php">
       <input type="hidden" name="did" value="<?php echo $deck['deckID'];?>">
-  <button type="submit" class="Cards">Submit</button>
+  <button type="submit" class="Cards">Cards</button>
 </form>
   </td>
   
