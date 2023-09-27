@@ -7,6 +7,7 @@
         <th>DeckID</th>  
   <th>Deck Name</th>
    <th>Duelist Name</th>  
+        <th></th>
       </tr>
       
     </thead>
@@ -19,6 +20,12 @@ while($deck = $decks->fetch_assoc())
   <td><?php echo $deck['deckID'];?></td>
   <td><?php echo $deck['deckname'];?></td>
   <td><?php echo $deck['duelistname'];?></td>
+  <td>
+    <form method="post" action="decks-with-cards.php">
+      <input type="hidden" name="did" value="<?php echo $deck['deckID'];?>">
+  <button type="submit" class="Cards">Submit</button>
+</form>
+  </td>
   
   
 </tr>
