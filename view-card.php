@@ -22,7 +22,7 @@ while($card = $cards->fetch_assoc())
   <td><a href = "https://www.tcgplayer.com/search/all/product?q=<?php echo $card['cardname'];?>"><?php echo $card['cardname'];?></td></a>
   <td><?php echo $card['cardtype'];?></td>
 
-  https://www.tcgplayer.com/search/all/product?q=blue-eyes&view=list
+ 
   
   
 </tr>
