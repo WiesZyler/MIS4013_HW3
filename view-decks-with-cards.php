@@ -28,9 +28,9 @@ while($deck = $decks->fetch_assoc())
   <td><?php echo $deck['cardnumber'];?></td>
    <td><?php echo $deck['cardtype'];?></td>
  <?php
-$pack = selectPack(echo decks['packID'];)
+$pack = selectPack($deck['packID'];)
  ?>
-  <td><?php echo $dpack['packname'];?></td>
+  <td><?php echo $pack['packname'];?></td>
 </tr>
 
 
