@@ -1,3 +1,11 @@
+<div class="row">
+  <div class="col">
+    
+  </div>
+    <div class="col-auto">
+    
+  </div>
+</div>
 <h1>Card Info</h1>
 <div class="table-responsive">
   <table class="table">
