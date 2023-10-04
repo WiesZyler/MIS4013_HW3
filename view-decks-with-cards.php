@@ -13,6 +13,7 @@
         <th>Card Name</th>  
         <th>Card Number</th>
         <th>Card Type</th>
+       <th>Pack Name</th>
       </tr>
       
     </thead>
@@ -26,7 +27,11 @@ while($deck = $decks->fetch_assoc())
   <td><?php echo $deck['cardname'];?></td>
   <td><?php echo $deck['cardnumber'];?></td>
    <td><?php echo $deck['cardtype'];?></td>
-  
+   <?php
+while($pack = $packs->fetch_assoc())
+{
+ ?>
+  <td><?php echo $dpack['packname'];?></td>
 </tr>
 
 
