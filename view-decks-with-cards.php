@@ -33,11 +33,11 @@ $pack = selectPack($deck['packID'])
   <td><?php echo $pack['packname'];?></td>
 </tr>
 
-}
+
      
+
+<?php
 }
-
-
 ?>
     </tbody>
   </table>
