@@ -18,7 +18,7 @@
       
     </thead>
     <tbody>
-      <?php
+     <?php
 while($deck = $decks->fetch_assoc())
 {
 ?>
