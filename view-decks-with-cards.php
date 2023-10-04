@@ -36,13 +36,15 @@ while($pack = $packs->fetch_assoc())
 ?>
 
   <td><?php echo $pack['packname'];?></td>
+<?php
+}
+ ?>
 </tr>
 
 
      
 
 <?php
-}
 }
 ?>
     </tbody>
