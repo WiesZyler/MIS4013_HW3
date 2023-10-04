@@ -10,7 +10,14 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      insertCard($_POST['cName'],$_POST['cNum']);
+      if ( insertCard($_POST['cName'],$_POST['cNum']))
+      {
+       echo <div class="alert alert-success" role="alert"> Card Added! </div>
+          }
+      else
+      {
+        <div class="alert alert-danger" role="alert"> Error! Card Not Added! </div>
+      }
         break;
     }
 }
