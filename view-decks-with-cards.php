@@ -37,6 +37,7 @@ while($pack = $packs->fetch_assoc())
 
       <?php
 }
+}
 
 
 ?>
