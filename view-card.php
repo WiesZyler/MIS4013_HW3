@@ -4,7 +4,7 @@
   </div>
     <div class="col-auto">
         <?php
-include "view-card-newform.pfp"
+include "view-card-newform.php"
 ?>
   </div>
 </div>
