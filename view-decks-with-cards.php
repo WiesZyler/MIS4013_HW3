@@ -30,8 +30,8 @@ while($deck = $decks->fetch_assoc())
    <td><?php echo $deck['cardtype'];?></td>
  <td>
  <?php
-  $pack = selectPack($deck['packID']);
-while($packs = $packs->fetch_assoc())
+  $packs = selectPack($deck['packID']);
+while($pack = $packs->fetch_assoc())
 {
 ?>
 
