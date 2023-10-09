@@ -6,30 +6,31 @@ foreach ($decks as $deck) {
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
-    <p class="card-text">
-      <?php
-      $packs = selectPack($deck['packID']);
-      while ($pack = $packs->fetch_assoc()) {
-      ?>
-        <table class="table">
-          <thead>
-            <tr>
-              <th><h4><?php echo $pack['packname']; ?></h4></th>
-            </tr>
-          </thead>
-          <tbody>
+ <ul class="list-group list-group-flush">
+    
+         
             <?php
-            $cards = selectCardsByPack($pack['packID']);
+          
+         
             while ($card = $cards->fetch_assoc()) {
             ?>
-              <tr>
-                <td><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?></td>
-              </tr>
+             
+            <li class="list-group-item">  <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> </li>
+            
             <?php
             }
             ?>
-          </tbody>
-        </table>
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+</div>
+
+
+          
       <?php
       } 
       ?>
