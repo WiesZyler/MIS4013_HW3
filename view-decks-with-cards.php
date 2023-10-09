@@ -51,3 +51,47 @@ if($pack = $packs->fetch_assoc())
     </tbody>
   </table>
 </div>
+
+ <?php
+while($deck = $decks->fetch_assoc())
+{
+?>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $deck['duelistname'];?>'s <?php echo $deck['deckname'];?> Deck</h5>
+    <p class="card-text">
+     <?php
+  $packs = selectCardsByPack($deck['packID']);
+ While($pack = $packs->fetch_assoc())
+{
+?>
+     <table class="table">
+    <thead>      
+      <tr>
+        <th><?php echo $pack['packname'] . ' ';?></th>  
+       </tr>
+    </thead>
+    <tbody>
+   <div class="card" style="width: 18rem;">
+    
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+
+
+
+   
+  </ul>
+</div>
+  </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+
+
+
+
+
+
