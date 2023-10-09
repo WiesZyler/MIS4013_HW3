@@ -6,6 +6,7 @@ foreach ($decks as $deck) {
               <ul class="list-group list-group-flush>';
 
     $cards = selectDecksWithCards($deck['deckID']);
+    $packs = selectCardsByPack($deck['packID']);
     while ($card = $cards->fetch_assoc()) {
         
         echo '<li class="list-group-item">' . $card['cardnumber'] . ' - ' . $card['cardname'] . ' - ' . $card['cardtype'];
