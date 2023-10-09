@@ -1,6 +1,6 @@
 <h1>All Decks With Cards</h1>
 <?php
-foreach ($deck in $decks->fetch_assoc()) {
+foreach ($decks as deck) {
 ?>
 
 <div class="card" style="width: 18rem;">
