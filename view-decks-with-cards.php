@@ -2,42 +2,26 @@
 <?php
 foreach ($decks as $deck) {
 ?>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
+      <ul class="list-group list-group-flush">
+        <?php
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
- <ul class="list-group list-group-flush">
-    
-         
-            <?php
-          
-         
-            while ($card = $cards->fetch_assoc()) {
-               $packs = selectPack($card['packID'])
-            ?>
-             $pack = selectPack(card['packID'])
-            <li class="list-group-item">  <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $pack['packName']; ?> </li>
-            
-            <?php
-            }
-            ?>
-
-<div class="card" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-</div>
-
-
-          
-      <?php
-      } 
-      ?>
-    </p>
+        $cards = selectCardsByDeck($deck['deckID']);
+        while ($card = $cards->fetch_assoc()) {
+        
+          $pack = selectPack($card['packID']);
+        ?>
+          <li class="list-group-item">
+            <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - Pack: <?php echo $pack['packName']; ?>
+          </li>
+        <?php
+        }
+        ?>
+      </ul>
+    </div>
   </div>
-</div>
 <?php
-} 
+}
 ?>
