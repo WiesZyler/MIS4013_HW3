@@ -13,9 +13,9 @@ foreach ($decks as $deck) {
         
           $pack = selectPack($card['packID']);
           
-          // Check if $pack is a valid mysqli_result
+
           if ($pack) {
-            // Fetch the pack data
+         
             $packData = $pack->fetch_assoc();
             ?>
             <li class="list-group-item">
