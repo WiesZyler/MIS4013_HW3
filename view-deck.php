@@ -1,22 +1,3 @@
-<span>
-  <h1>Card Info</h1>
-  <form method="post" action="decks-with-cards.php">
-    <?php
-   
-    $deckIDs = [];
-    while ($deck = $decks->fetch_assoc()) {
-      $deckIDs[] = $deck['deckID']; 
-    }
-    foreach ($deckIDs as $deckID) {
-    ?>
-      <input type="hidden" name="did[]" value="<?php echo $deckID; ?>">
-    <?php
-    }
-    ?>
-
-    <button type="submit" class="Cards">All Cards for each Deck</button>
-  </form>
-</span>
 
 <div class="table-responsive">
   <table class="table">
