@@ -20,6 +20,7 @@ function selectPack() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT P.packID, packname, packType, releasedate FROM `pack` P JOIN `card` C on P.packID = C.packID where C.packID = ?");
+          $stmt->bind_param("s", $pid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
