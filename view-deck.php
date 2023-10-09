@@ -1,7 +1,7 @@
 <span>
 <h1>Card Info</h1>
 <form method="post" action="decks-with-cards.php">
-      <input type="hidden" name="did" value="<?php echo $deck['deckID'];?>">
+      <input type="hidden" name="did" value="<?php echo $deck['*'];?>">
   <button type="submit" class="Cards">All Cards for each Deck</button>
 </span>
 <div class="table-responsive">
