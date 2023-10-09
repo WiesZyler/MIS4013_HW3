@@ -30,7 +30,9 @@ while($deck = $decks->fetch_assoc())
 
 
 
-   
+ <?php  }
+ }
+ ?>
   </ul>
 </div>
   </p>
