@@ -8,7 +8,7 @@ foreach ($decks as $deck) {
     <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
     <p class="card-text">
       <?php
-      $packs = selectCardsByPack($deck['packID']);
+      $packs = selectPack($deck['packID']);
       while ($pack = $packs->fetch_assoc()) {
       ?>
         <table class="table">
