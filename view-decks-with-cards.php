@@ -35,7 +35,7 @@ if($pack = $packs->fetch_assoc())
 {
 ?>
 
-  <?php echo $pack['packname'] . ' ';?>
+  <?php echo $deck['packname'] . ' ';?>
 <?php
 }
  ?>
