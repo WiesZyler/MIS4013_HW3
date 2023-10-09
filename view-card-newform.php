@@ -21,8 +21,8 @@
                   <form method="post" action="">
 
                     <div class="mb-3">
-                      <label for="cNumber" class="form-label">Card Number</label>
-                      <input type="text" class="form-control" id="cNumber">
+                      <label for="cNum" class="form-label">Card Number</label>
+                      <input type="text" class="form-control" id="cNum">
                     </div>
                     
                     <div class="mb-3">
