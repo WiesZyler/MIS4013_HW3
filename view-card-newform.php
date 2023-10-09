@@ -19,19 +19,52 @@
       <div class="modal-body">
 
                   <form method="post" action="">
+
+                    <div class="mb-3">
+                      <label for="cNumber" class="form-label">Card Number</label>
+                      <input type="text" class="form-control" id="cNumber">
+                    </div>
+                    
                     <div class="mb-3">
                       <label for="cName" class="form-label">Card Name</label>
                       <input type="text" class="form-control" id="cName">
-        
                     </div>
+                  
                     <div class="mb-3">
-                      <label for="cNumber" class="form-label">Card Name</label>
-                      <input type="cName" class="form-control" id="cName">
+                      <label for="pID" class="form-label">Pack ID</label>
+                      <input type="text" class="form-control" id="pID">
                     </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                    <div class="mb-3">
+                      <label for="cType" class="form-label">Card Type</label>
+                      <input type="text" class="form-control" id="cType">
                     </div>
+                    
+                    <div class="mb-3">
+                      <label for="cAtt" class="form-label">Attribute</label>
+                      <input type="text" class="form-control" id="cAtt">
+                    </div>
+
+                     <div class="mb-3">
+                      <label for="cST" class="form-label">Spell/Trap</label>
+                      <input type="text" class="form-control" id="cST">
+                    </div>
+
+                     <div class="mb-3">
+                      <label for="cLevel" class="form-label">Level</label>
+                      <input type="integer" class="form-control" id="cLevel">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="mType" class="form-label">Monster Type</label>
+                      <input type="text" class="form-control" id="mType">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="cRarity" class="form-label">Rarity</label>
+                      <input type="text" class="form-control" id="cRarity">
+                    </div>
+                 
                     <input type="hidden" name="actionType" value="Add">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
