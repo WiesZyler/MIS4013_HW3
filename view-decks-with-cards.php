@@ -8,7 +8,7 @@ foreach ($decks as $deck) {
       <ul class="list-group list-group-flush">
         <?php
 
-        $cards = selectCardsByDeck($deck['deckID']);
+        $cards = selectDecksWithCards($deck['deckID']);
         while ($card = $cards->fetch_assoc()) {
         
           $pack = selectPack($card['packID']);
