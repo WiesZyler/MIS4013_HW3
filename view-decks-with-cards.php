@@ -17,28 +17,25 @@ while ($deck = $decks->fetch_assoc()) {
               <th><h4><?php echo $pack['packname']; ?></h4></th>
             </tr>
           </thead>
-
-          <?php
-      $cards = selectCardsByPack($pack['packID']);
-      while ($card = $cards->fetch_assoc()) {
-      ?>
           <tbody>
-            <tr>
-              <td><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?></td>
-            </tr>
+            <?php
+            $cards = selectCardsByPack($pack['packID']);
+            while ($card = $cards->fetch_assoc()) {
+            ?>
+              <tr>
+                <td><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?></td>
+              </tr>
+            <?php
+            }
+            ?>
           </tbody>
         </table>
       <?php
-      }
+      } 
       ?>
     </p>
   </div>
 </div>
 <?php
-}
+} 
 ?>
-   <?php
-      }
-      ?>
-
-
