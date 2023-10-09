@@ -1,5 +1,8 @@
+
 <h1>All Decks With Cards</h1>
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 foreach ($decks as $deck) {
 ?>
   <div class="card" style="width: 18rem;">
