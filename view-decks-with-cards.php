@@ -14,10 +14,7 @@ foreach ($decks as $deck) {
           $pack = selectPack();
         ?>
           <li class="list-group-item">
-            <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php 
-          if (is_array($pack)) 
-          { echo " - Pack: " . $pack['packName']; } 
-          else {echo " - Pack information not available";
+            <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $pack['packName']; ?>
     } ?>
           </li>
         <?php
