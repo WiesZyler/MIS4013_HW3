@@ -19,7 +19,7 @@ function selectDecksWithCards($did) {
 function selectPack() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT packID, packname, packType, releasedate FROM `pack`");
+        $stmt = $conn->prepare("SELECT packID, packname, packType, releasedate FROM `pack` where packID = ?");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
