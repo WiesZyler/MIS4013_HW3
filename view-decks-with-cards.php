@@ -7,8 +7,12 @@ foreach ($decks as $deck) {
 
     $cards = selectDecksWithCards($deck['deckID']);
     while ($card = $cards->fetch_assoc()) {
-        $pack = selectPack($card['packID']);
-        echo '<li class="list-group-item">' . $card['cardnumber'] . ' - ' . $card['cardname'] . ' - ' . $card['cardtype'] . ' - ' . $pack['packName'] . '</li>';
+        
+        echo '<li class="list-group-item">' . $card['cardnumber'] . ' - ' . $card['cardname'] . ' - ' . $card['cardtype'] . ' - ' . 
+            if($pack = $packs->fetch_assoc())
+{
+$pack['packName'] . '</li>';
+    }
     }
 
     echo '</ul>
