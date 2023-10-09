@@ -15,14 +15,13 @@ foreach ($decks as $deck) {
         ?>
           <li class="list-group-item">
             <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $pack['packName']; ?>
-    } ?>
           </li>
         <?php
-        }
+        } 
         ?>
       </ul>
     </div>
   </div>
 <?php
-}
+} 
 ?>
