@@ -1,7 +1,4 @@
 <h1>Decks With Cards</h1>
-<?php if($deck = $decks->fetch_assoc())
-{?>
-
  <?php
 while($deck = $decks->fetch_assoc())
 {
