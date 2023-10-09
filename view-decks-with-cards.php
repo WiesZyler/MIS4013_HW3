@@ -13,15 +13,26 @@ foreach ($decks as $deck) {
         
           $pack = selectPack($card['packID']);
           
-          // Check if $pack is a valid mysqli_result
+       
           if ($pack) {
             // Fetch the pack data
             $packData = $pack->fetch_assoc();
-            ?>
-            <li class="list-group-item">
-              <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $packData['packName']; ?>
-            </li>
-            <?php
+            
+
+            if (isset($packData['packName'])) {
+              ?>
+              <li class="list-group-item">
+                <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $packData['packName']; ?>
+              </li>
+              <?php
+            } else {
+            
+              ?>
+              <li class="list-group-item">
+                <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - Pack Name Not Found
+              </li>
+              <?php
+            }
           }
         } 
         ?>
