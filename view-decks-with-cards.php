@@ -1,6 +1,6 @@
-<h1>Decks With Cards</h1>
+<h1>All Decks With Cards</h1>
 <?php
-while ($deck = $decks->fetch_assoc()) {
+foreach ($deck in $decks->fetch_assoc()) {
 ?>
 
 <div class="card" style="width: 18rem;">
