@@ -37,5 +37,8 @@ while ($deck = $decks->fetch_assoc()) {
 <?php
 }
 ?>
+   <?php
+      }
+      ?>
 
 
