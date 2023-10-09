@@ -1,44 +1,41 @@
 <h1>Decks With Cards</h1>
- <?php
-while($deck = $decks->fetch_assoc())
-{
+<?php
+while ($deck = $decks->fetch_assoc()) {
 ?>
 
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title"><?php echo $deck['duelistname'];?>'s <?php echo $deck['deckname'];?> Deck</h5>
+    <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
     <p class="card-text">
-     <?php
-  $packs = selectCardsByPack($deck['packID']);
- While($pack = $packs->fetch_assoc())
-{
-?>
-     <table class="table">
-    <thead>      
-      <tr>
-        <th><?php echo $pack['packname'] . ' ';?></th>  
-       </tr>
-    </thead>
-    <tbody>
-   <div class="card" style="width: 18rem;">
-    
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><?php echo $deck['cardnumber'];?> - <?php echo $deck['cardname'];?> - <?php echo $deck['cardtype'];?></li>
+      <?php
+      $packs = selectCardsByPack($deck['packID']);
+      while ($pack = $packs->fetch_assoc()) {
+      ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th><h4><?php echo $pack['packname']; ?></h4></th>
+            </tr>
+          </thead>
 
-
-
- <?php  }
- }
- ?>
-  </ul>
-</div>
-  </p>
+          <?php
+      $cards = selectCardsByPack($pack['packID']);
+      while ($card = $cards->fetch_assoc()) {
+      ?>
+          <tbody>
+            <tr>
+              <td><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?></td>
+            </tr>
+          </tbody>
+        </table>
+      <?php
+      }
+      ?>
+    </p>
   </div>
 </div>
-
-
-
-
-
+<?php
+}
+?>
 
 
