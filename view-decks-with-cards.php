@@ -1,5 +1,8 @@
+
 <h1>All Decks With Cards</h1>
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 foreach ($decks as $deck) {
 ?>
   <div class="card" style="width: 18rem;">
@@ -12,28 +15,12 @@ foreach ($decks as $deck) {
         while ($card = $cards->fetch_assoc()) {
         
           $pack = selectPack($card['packID']);
-          
-       
-          if ($pack) {
-            // Fetch the pack data
-            $packData = $pack->fetch_assoc();
-            
-
-            if (isset($packData['packName'])) {
-              ?>
-              <li class="list-group-item">
-                <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $packData['packName']; ?>
-              </li>
-              <?php
-            } else {
-            
-              ?>
-              <li class="list-group-item">
-                <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - Pack Name Not Found
-              </li>
-              <?php
-            }
-          }
+          var_dump($pack);
+        ?>
+          <li class="list-group-item">
+            <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $deck['packName']; ?>
+          </li>
+        <?php
         } 
         ?>
       </ul>
