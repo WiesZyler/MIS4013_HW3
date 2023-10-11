@@ -22,47 +22,47 @@
 
                     <div class="mb-3">
                       <label for="cNum" class="form-label">Card Number</label>
-                      <input type="text" class="form-control" id="cNum">
+                      <input type="text" class="form-control" id="cNum" name="cNum">
                     </div>
                     
                     <div class="mb-3">
                       <label for="cName" class="form-label">Card Name</label>
-                      <input type="text" class="form-control" id="cName">
+                      <input type="text" class="form-control" id="cName" name="cName">
                     </div>
                   
                     <div class="mb-3">
                       <label for="pID" class="form-label">Pack ID</label>
-                      <input type="text" class="form-control" id="pID">
+                      <input type="text" class="form-control" id="pID" name="pID">
                     </div>
 
                     <div class="mb-3">
                       <label for="cType" class="form-label">Card Type</label>
-                      <input type="text" class="form-control" id="cType">
+                      <input type="text" class="form-control" id="cType" name="cType">
                     </div>
                     
                     <div class="mb-3">
                       <label for="cAtt" class="form-label">Attribute</label>
-                      <input type="text" class="form-control" id="cAtt">
+                      <input type="text" class="form-control" id="cAtt"  name="cAtt">
                     </div>
 
                      <div class="mb-3">
                       <label for="cST" class="form-label">Spell/Trap</label>
-                      <input type="text" class="form-control" id="cST">
+                      <input type="text" class="form-control" id="cST"  name="cST>
                     </div>
 
                      <div class="mb-3">
                       <label for="cLevel" class="form-label">Level</label>
-                      <input type="text" class="form-control" id="cLevel">
+                      <input type="text" class="form-control" id="cLevel"  name="cLevel>
                     </div>
 
                     <div class="mb-3">
                       <label for="mType" class="form-label">Monster Type</label>
-                      <input type="text" class="form-control" id="mType">
+                      <input type="text" class="form-control" id="mType"  name="mType">
                     </div>
 
                     <div class="mb-3">
                       <label for="cRarity" class="form-label">Rarity</label>
-                      <input type="text" class="form-control" id="cRarity">
+                      <input type="text" class="form-control" id="cRarity"  name="cRarity">
                     </div>
                  
                     <input type="hidden" name="actionType" value="Add">
