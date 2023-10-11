@@ -31,20 +31,5 @@ function insertCard() {
 }
 ?>
 
-<?php
-function maxCardID() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Max(cardID) as MaxID FROM `card`;");
-         $stmt->bind_param("i",$cI);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-?>
+
 
