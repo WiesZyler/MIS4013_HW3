@@ -20,6 +20,8 @@
 
                   <form method="post" action="">
 
+
+                    <input type="hidden" class="form-control" id="cID" name="cID" value="<?php echo $next_cID; ?>">
                     <div class="mb-3">
                       <label for="cNum" class="form-label">Card Number</label>
                       <input type="text" class="form-control" id="cNum" name="cNum">
