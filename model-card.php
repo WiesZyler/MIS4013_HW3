@@ -21,7 +21,7 @@ function insertCard() {
         $stmt = $conn->prepare("INSERT INTO `card` (`cardID`, `cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("issssssiss",$cID,$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->get_result();
         $conn->close();
         return $success;
     } catch (Exception $e) {
