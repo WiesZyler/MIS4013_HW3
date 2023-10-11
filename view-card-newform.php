@@ -52,7 +52,7 @@
 
                      <div class="mb-3">
                       <label for="cLevel" class="form-label">Level</label>
-                      <input type="integer" class="form-control" id="cLevel">
+                      <input type="text" class="form-control" id="cLevel">
                     </div>
 
                     <div class="mb-3">
