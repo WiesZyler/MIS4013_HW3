@@ -4,7 +4,7 @@ require_once("model-card.php");
 
 $PageTitle = "Cards";
 include "view-header.php";
-
+var_dump($next_cID);
 if (isset($_POST['actionType']))
 {
   switch ($_POST['actionType'])
