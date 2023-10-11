@@ -47,12 +47,12 @@
 
                      <div class="mb-3">
                       <label for="cST" class="form-label">Spell/Trap</label>
-                      <input type="text" class="form-control" id="cST"  name="cST>
+                      <input type="text" class="form-control" id="cST"  name="cST">
                     </div>
 
                      <div class="mb-3">
                       <label for="cLevel" class="form-label">Level</label>
-                      <input type="text" class="form-control" id="cLevel"  name="cLevel>
+                      <input type="text" class="form-control" id="cLevel"  name="cLevel">
                     </div>
 
                     <div class="mb-3">
