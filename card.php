@@ -1,6 +1,11 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 require_once("util-db.php");
 require_once("model-card.php");
+var_dump($_POST);
 
 $PageTitle = "Cards";
 include "view-header.php";
