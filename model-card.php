@@ -15,18 +15,14 @@ function selectCard() {
 ?>
 
  <?php
-function insertCard($cNum, $cName, $pID, $cType, $cAtt, $cST, $cLevel, $mType, $cRarity) {
-    $conn = get_db_connection();
-    $sql = "INSERT INTO `card` (`cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    return $sql; // Temporarily return the SQL query
-}
-/* 
+
 function insertCard() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `card` (`cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("ssssssiss",$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity);
-        $stmt->execute();
+        $stmt->debugDumpParams();
+       // $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
         return $success;
@@ -35,7 +31,7 @@ function insertCard() {
         throw $e;
     }
 }
-*/
+
 ?>
 
 
