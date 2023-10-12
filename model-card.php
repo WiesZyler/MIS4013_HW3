@@ -21,7 +21,7 @@ function insertCard() {
         $stmt = $conn->prepare("INSERT INTO `card` (`cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("ssssssiss",$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity);
         $stmt->execute();
-        cho "SQL Query: " . $stmt->sql;
+        echo "SQL Query: " . $stmt->sql;
         echo "Affected Rows: " . $stmt->affected_rows;
         $success = $stmt->get_result();
         $conn->close();
