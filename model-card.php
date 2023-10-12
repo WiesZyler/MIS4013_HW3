@@ -18,7 +18,7 @@ function selectCard() {
 function insertCard() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `card` ( `cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `card` (`cardID`, `cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("ssssssiss",$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity);
         $stmt->execute();
         $success = $stmt->get_result();
