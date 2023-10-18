@@ -16,7 +16,7 @@ function selectCard() {
 
  <?php
 
-function insertCard() {
+function insertCard($cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `card` (`cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
