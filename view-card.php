@@ -39,7 +39,7 @@ while($card = $cards->fetch_assoc())
 
   <td>
     <?php
-include "view-card-newform.php"
+include "view-card-editform.php"
 ?>
   </td>
   
