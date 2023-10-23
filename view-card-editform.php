@@ -67,7 +67,7 @@
                       <input type="text" class="form-control" id="cRarity<?php echo $card['cardID'];?>"  name="cRarity" value="<?php echo $card['rarity'];?>">
                     </div>
                  <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
-                    <input type="hidden" name="actionType" value="Add">
+                    <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
 
