@@ -22,9 +22,8 @@ if (isset($_POST['actionType']))
       {
         echo '<div class="alert alert-danger" role="alert"> Error! Card Not Added! </div>';
       }
-        break;
-    }
-  case  "Delete":
+      break;
+      case  "Delete":
       if (deleteCard($_POST['cID']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Deleted</div>';
@@ -34,7 +33,7 @@ if (isset($_POST['actionType']))
         echo '<div class="alert alert-danger" role="alert"> Error! Card Not Deleted! </div>';
       }
         break;
-    }
+
 }
 
 $cards = selectCard();
