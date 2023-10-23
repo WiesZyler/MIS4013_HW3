@@ -18,7 +18,10 @@ include "view-card-newform.php"
   <th>Card Number</th>
    <th>Card Name</th>  
         <th>Card Type</th> 
-           <th> </th>
+           <th> 
+           
+           </th>
+<th></th>
       </tr>
    
       
@@ -34,7 +37,11 @@ while($card = $cards->fetch_assoc())
   <td><a href = "https://www.tcgplayer.com/search/all/product?q=<?php echo $card['cardname'];?>" target = "_blank"><?php echo $card['cardname'];?></td></a>
   <td><?php echo $card['cardtype'];?></td>
 
-  
+  <td>
+    <?php
+include "view-card-newform.php"
+?>
+  </td>
   
   <td>
     <form method="post" action="">
