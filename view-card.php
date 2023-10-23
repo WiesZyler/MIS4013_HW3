@@ -29,7 +29,7 @@ while($card = $cards->fetch_assoc())
 {
 ?>
 <tr>
-  <td><?php echo $card['cardID'];?></td>
+  <td><?php echo $card['packID'];?></td>
   <td><?php echo $card['cardnumber'];?></td>
   <td><a href = "https://www.tcgplayer.com/search/all/product?q=<?php echo $card['cardname'];?>" target = "_blank"><?php echo $card['cardname'];?></td></a>
   <td><?php echo $card['cardtype'];?></td>
