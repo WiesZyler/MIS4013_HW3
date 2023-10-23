@@ -2,7 +2,7 @@
 function selectCard() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT cardID, cardnumber, cardname, packID, cardtype FROM `card` WHERE 1");
+        $stmt = $conn->prepare("SELECT cardID, cardnumber, cardname, packID, attribute, spell/trap, level, monstertype, rarity cardtype FROM `card` WHERE 1");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
