@@ -24,6 +24,17 @@ if (isset($_POST['actionType']))
       }
         break;
     }
+  case  "Delete":
+      if (deleteCard($_POST['cNum'],$_POST['cName'],$_POST['pID'],$_POST['cType'],$_POST['cAtt'],$_POST['cST'],$_POST['cLevel'],$_POST['mType'],$_POST['cRarity']))
+      {
+       echo '<div class="alert alert-success" role="alert"> Card Added! </div>';
+          }
+      else
+      {
+        echo '<div class="alert alert-danger" role="alert"> Error! Card Not Added! </div>';
+      }
+        break;
+    }
 }
 
 $cards = selectCard();
