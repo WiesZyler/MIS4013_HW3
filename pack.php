@@ -8,43 +8,44 @@ include "view-header.php";
 $packs = selectPack();
 include "view-pack.php";
 include "view-footer.php";
-?>
+
 
 if (isset($_POST['actionType']))
 {
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertCard($_POST['cNum'],$_POST['cName'],$_POST['pID'],$_POST['cType'],$_POST['cAtt'],$_POST['cST'],$_POST['cLevel'],$_POST['mType'],$_POST['cRarity']))
+      if (insertPack($_POST['pID'],$_POST['pName'],$_POST['pType'],$_POST['rDate']))
       {
-       echo '<div class="alert alert-success" role="alert"> Card Added! </div>';
+       echo '<div class="alert alert-success" role="alert"> Pack Added! </div>';
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Card Not Added! </div>';
+        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Added! </div>';
       }
       break;
       case  "Delete":
-      if (deleteCard($_POST['cID']))
+      if (deletePack($_POST['pID']))
       {
-       echo '<div class="alert alert-success" role="alert"> Card Deleted</div>';
+       echo '<div class="alert alert-success" role="alert"> Pack Deleted</div>';
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Card Not Deleted! </div>';
+        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Deleted! </div>';
       }
         break;
        case  "Edit":
-      if (editCard($_POST['cID'],$_POST['cNum'],$_POST['cName'],$_POST['pID'],$_POST['cType'],$_POST['cAtt'],$_POST['cST'],$_POST['cLevel'],$_POST['mType'],$_POST['cRarity']))
+      if (editPack($_POST['pID'],$_POST['pName'],$_POST['pType'],$_POST['rDate']))
       {
-       echo '<div class="alert alert-success" role="alert"> Card Edited! </div>';
+       echo '<div class="alert alert-success" role="alert"> Pack Edited! </div>';
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Card Not Edit! </div>';
+        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Edited! </div>';
       }
       break;
     }
 
 }
+?>
 
