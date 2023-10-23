@@ -22,7 +22,6 @@ function insertCard($cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity)
         $stmt = $conn->prepare("INSERT INTO `card` (`cardnumber`, `cardname`, `packID`, `cardtype`, `attribute`, `spell/trap`, `level`, `monstertype`, `rarity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("ssssssiss",$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity);
       $success =  $stmt->execute();
-
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -37,7 +36,6 @@ function deleteCard($cID) {
         $stmt = $conn->prepare("Delete from card where cardID=?");
          $stmt->bind_param("i", $cID);
       $success =  $stmt->execute();
-
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -46,7 +44,7 @@ function deleteCard($cID) {
     }
 }
 
-function editCard($cID) {
+function editCard($cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity,$cID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `card` SET `cardnumber`=?, `cardname`=?, `packID`=?, `cardtype`=?, `attribute`=?, `spell/trap`=?, `level`=?, `monstertype`=?, `rarity`=? WHERE `cardID`=?");
