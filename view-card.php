@@ -37,7 +37,7 @@ while($card = $cards->fetch_assoc())
   
   <td>
     <form method="post" action="">
-      <input type="hidden" name="cID" value="Delete" value="<?php echo $card['cardID'];?>">
+      <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
  <input type="hidden" name="actiontype" value="Delete">
     <button type="Submit" class="btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
