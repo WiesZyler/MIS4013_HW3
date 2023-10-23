@@ -31,6 +31,22 @@ function insertCard($cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity)
     }
 }
 
+function deleteCard($cID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("Delete from card where cardID=?");
+         $stmt->bind_param("i", $cID);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 ?>
 
 
