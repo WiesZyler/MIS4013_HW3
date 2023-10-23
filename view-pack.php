@@ -18,6 +18,8 @@ include "view-pack-newform.php"
         <th>Pack Type</th>
    <th>Release Date</th>  
       <th></th>
+        <th></th>
+           <th></th>
       </tr>
       
     </thead>
