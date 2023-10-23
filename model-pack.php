@@ -13,3 +13,53 @@ function selectPack() {
     }
 }
 ?>
+
+<?php
+
+function insertPack($pID,$pName,$pType,$rDate) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `pack` (`packID`, `packname`, `packType`, `releasedate`) VALUES (?, ?, ?, ?,)");
+         $stmt->bind_param("ssss",$pID,$pName,$pType,$rDate);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deletePack($pID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("Delete from pak where cardID=?");
+         $stmt->bind_param("s", $pID);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function editPack($cID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `pack` SET `packname`=?, `packType`=?, `releasedate`=? WHERE `packID`=?");
+         $stmt->bind_param("ssss",$pName,$pType,$rDate,$pID);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
+?>
