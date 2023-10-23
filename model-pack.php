@@ -19,7 +19,7 @@ function selectPack() {
 function insertPack($pID,$pName,$pType,$rDate) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `pack` (`packID`, `packname`, `packType`, `releasedate`) VALUES (?, ?, ?, ?,)");
+        $stmt = $conn->prepare("INSERT INTO `pack` (`packID`, `packname`, `packType`, `releasedate`) VALUES (?, ?, ?, ?)");
          $stmt->bind_param("ssss",$pID,$pName,$pType,$rDate);
       $success =  $stmt->execute();
 
