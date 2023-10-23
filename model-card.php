@@ -46,6 +46,21 @@ function deleteCard($cID) {
     }
 }
 
+function editCard($cID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `card` SET `cardnumber`=?, `cardname`=?, `packID`=?, `cardtype`=?, `attribute`=?, `spell/trap`=?, `level`=?, `monstertype`=?, `rarity`=? WHERE `cardID`=?");
+         $stmt->bind_param("ssssssissi",$cNum,$cName,$pID,$cType,$cAtt,$cST,$cLevel,$mType,$cRarity,$cID);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 
 ?>
 
