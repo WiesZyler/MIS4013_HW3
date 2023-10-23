@@ -27,12 +27,12 @@
                     
                     <div class="mb-3">
                       <label for="pType<?php echo $pack['packID'];?>" class="form-label">Pack Type</label>
-                      <input type="text" class="form-control" id="pType<?php echo $pack['packID'];?>" name="pType" value="<?php echo $pack['packType'];?>>
+                      <input type="text" class="form-control" id="pType<?php echo $pack['packID'];?>" name="pType" value="<?php echo $pack['packType'];?>">
                     </div>
 
                     <div class="mb-3">
                       <label for="rDate<?php echo $pack['packID'];?>" class="form-label">Release Date</label>
-                      <input type="text" class="form-control" id="rDate<?php echo $pack['packID'];?>" name="rDate" value="<?php echo $pack['releasedate'];?>>
+                      <input type="text" class="form-control" id="rDate<?php echo $pack['packID'];?>" name="rDate" value="<?php echo $pack['releasedate'];?>">
                     </div>
                     
                  
