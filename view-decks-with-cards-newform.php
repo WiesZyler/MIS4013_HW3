@@ -20,7 +20,10 @@
 
                   <form method="post" action="">
 
-
+<?php 
+$deckList = selectDecksForInput();
+include "view-deck-input.php"
+?>
                    
                     <div class="mb-3">
                       <label for="dID" class="form-label">Deck ID</label>
