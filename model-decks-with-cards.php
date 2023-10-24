@@ -49,7 +49,7 @@ function insertCard($cID, $dID, $cdQ) {
 function deleteCard($cdID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("Delete from card/deck where carddeckID=?");
+        $stmt = $conn->prepare("Delete from `card/deck` where carddeckID=?");
          $stmt->bind_param("i", $cdID);
       $success =  $stmt->execute();
         $conn->close();
