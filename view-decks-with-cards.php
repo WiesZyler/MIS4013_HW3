@@ -1,12 +1,9 @@
 <h1>All Decks With Cards</h1>
   <div class="card-group">
 <?php
-while ($deck = $decks->fetch_assoc())
-//foreach ($decks as $deck) 
-{
-?>
-
-  <div class="card" style="width: 18rem;">
+while ($deck = $decks->fetch_assoc()){
+  ?>
+  <div class="card">
     <div class="card-body">
       <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
       <p class="card-text">
