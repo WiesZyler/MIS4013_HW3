@@ -1,7 +1,8 @@
 <h1>All Decks With Cards</h1>
 <div class="card-group">
 <?php
-foreach ($decks as $deck) 
+while ($deck = $decks->fetch_assoc())
+//foreach ($decks as $deck) 
 {
 ?>
   <div class="card" style="width: 18rem;">
