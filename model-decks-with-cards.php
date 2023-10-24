@@ -15,41 +15,6 @@ function selectDecksWithCards($did) {
 }
 ?>
 
-
-<?php
-function selectPack($packID) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT packID, packname, packType, releasedate FROM `pack` WHERE packID = ?");
-        $stmt->bind_param("s", $packID); 
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-?>
-
-<?php
-function selectCardsByPack($pid) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT cardname, cardnumber, cardtype FROM `card` where packID = ?");
-        $stmt->bind_param("s", $pid);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-?>
-
 <?php
 function selectDeck() {
     try {
