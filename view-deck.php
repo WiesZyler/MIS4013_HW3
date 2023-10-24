@@ -4,7 +4,7 @@
   </div>
     <div class="col-auto">
         <?php
-include "view-Deck-newform.php"
+include "view-deck-newform.php"
 ?>
 <div class="table-responsive">
   <table class="table">
