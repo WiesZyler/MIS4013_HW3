@@ -34,6 +34,7 @@
                       <label for="rDate<?php echo $pack['packID'];?>" class="form-label">Release Date</label>
                       <input type="text" class="form-control" id="rDate<?php echo $pack['packID'];?>" name="rDate" value="<?php echo $pack['releasedate'];?>">
                     </div>
+                    <input type="hidden" name="pID" value="<?php echo $pack['packID'];?>">
                     
                  
                     <input type="hidden" name="actionType" value="Edit">
