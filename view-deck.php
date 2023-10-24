@@ -17,7 +17,7 @@ include "view-deck-newform.php"
    <th>Duelist Name</th>  
         <th></th>
           <th></th>
-          <th></th>
+         
       </tr>
       
     </thead>
