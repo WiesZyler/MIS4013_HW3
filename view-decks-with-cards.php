@@ -19,18 +19,10 @@ foreach ($decks as $deck) {
         $cards = selectDecksWithCards($deck['deckID']);
         while ($card = $cards->fetch_assoc()) {
         
-          $pack = selectPack($card['packID']);
-          
-
-          if ($pack) {
          
-            $packData = $pack->fetch_assoc();
-            ?>
-            <li class="list-group-item">
     
                <td><?php echo $card['cardnumber']; ?></td>
                <td><?php echo $card['cardname']; ?></td>
-               <td><?php echo $packData['packname']; ?></td>
              <td><?php echo $card['quantity']; ?></td>
             </li>
             <?php
