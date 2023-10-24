@@ -6,6 +6,7 @@
         <?php
 include "view-deck-newform.php"
 ?>
+    </div>
 <div class="table-responsive">
   <table class="table">
     <thead>
