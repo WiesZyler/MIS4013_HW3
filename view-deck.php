@@ -38,7 +38,7 @@ include "view-deck-editform.php"
   
     <td>
     <form method="post" action="">
-      <input type="hidden" name="cID" value="<?php echo $deck['deckID'];?>">
+      <input type="hidden" name="dID" value="<?php echo $deck['deckID'];?>">
  <input type="hidden" name="actionType" value="Delete">
     <button type="Submit" class="btn" onclick="return confirm('Are You Sure?');">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
