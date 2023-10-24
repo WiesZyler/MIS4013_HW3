@@ -7,8 +7,15 @@ foreach ($decks as $deck) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
       <ul class="list-group list-group-flush">
+  <table class="table">
+    <thead>
+      <th>Card Number</th>
+            <th>Card Name</th>
+            <th>Pack Name</th>
+            <th> Quantity</th>
+    </thead>
+  <tbody>
         <?php
-
         $cards = selectDecksWithCards($deck['deckID']);
         while ($card = $cards->fetch_assoc()) {
         
@@ -20,12 +27,17 @@ foreach ($decks as $deck) {
             $packData = $pack->fetch_assoc();
             ?>
             <li class="list-group-item">
-              <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?> - <?php echo $card['cardtype']; ?> - <?php echo $packData['packname']; ?>
+    
+               <td><?php echo $card['cardnumber']; ?></td>
+               <td><?php echo $card['cardname']; ?></td>
+               <td><?php echo $packData['packname']; ?></td>
+             <td><?php echo $packData['quantity']; ?></td>
             </li>
             <?php
           }
         } 
         ?>
+  </tbody>
       </ul>
     </div>
   </div>
