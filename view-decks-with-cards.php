@@ -17,7 +17,7 @@ foreach ($decks as $deck) {
         <?php
         $cards = selectDecksWithCards($deck['deckID']);
         while ($card = $cards->fetch_assoc()) {
-        
+        ?>
          
     
                <td><?php echo $card['cardnumber']; ?></td>
