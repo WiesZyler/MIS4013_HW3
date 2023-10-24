@@ -32,11 +32,11 @@ function selectDeck() {
 ?>
 
 <?php
-function insertCard($cdID, $cID, $dID, $cdQ) {
+function insertCard($cID, $dID, $cdQ) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `card/deck` (`cardID`, `deckID`, `quantity`) VALUES (?, ?, ?)");
-         $stmt->bind_param("iii",$cdID, $cID, $dID, $cdQ);
+         $stmt->bind_param("iii", $cID, $dID, $cdQ);
       $success =  $stmt->execute();
         $conn->close();
         return $success;
