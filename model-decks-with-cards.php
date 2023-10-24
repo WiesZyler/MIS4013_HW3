@@ -77,7 +77,7 @@ function editCard($cdQ, $cdID, $cID, $dID) {
 function selectDecksforInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT `deckID`, `deckname`, FROM `deck` Order by `deckname`");
+        $stmt = $conn->prepare("SELECT `deckID`, `deckname`,  `duelistname` FROM `deck` Order by `deckname`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
