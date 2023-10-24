@@ -30,7 +30,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editPack($_POST['pName'],$_POST['pType'],$_POST['rDate']))
+      if (editPack($_POST['pName'],$_POST['pType'],$_POST['rDate'],$_POST['pID']))
       {
        echo '<div class="alert alert-success" role="alert"> Pack Edited! </div>';
           }
