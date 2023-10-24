@@ -34,7 +34,7 @@ function insertPack($pID,$pName,$pType,$rDate) {
 function deletePack($pID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("Delete from pack where cardID=?");
+        $stmt = $conn->prepare("Delete from pack where packID=?");
          $stmt->bind_param("s", $pID);
       $success =  $stmt->execute();
 
