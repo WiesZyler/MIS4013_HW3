@@ -1,5 +1,16 @@
-<h1>All Decks With Cards</h1>
+<div class="row">
+  <div class="col">
+<h1>Decks With Cards</h1>
+  </div>
+  <div class="col-auto">
+<?php
+include "view-decks-with-cards-newform.php";
+?>
+  </div>
+</div>
 <div class="card-group">
+  <div class="col-auto">
+  </div>
 <?php
 while ($deck = $decks->fetch_assoc()) {
 ?>
