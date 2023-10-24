@@ -9,9 +9,12 @@ foreach ($decks as $deck)
       <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
   <table class="table">
     <thead>
-      <th>Card Number</th>
+      <tr>
+        <th>Card Number</th>
             <th>Card Name</th>
             <th> Quantity</th>
+      </tr>
+      
     </thead>
   <tbody>
         <?php
@@ -20,10 +23,11 @@ foreach ($decks as $deck)
         {
         ?>
          
-    
+              <tr>
                <td><?php echo $card['cardnumber']; ?></td>
                <td><?php echo $card['cardname']; ?></td>
              <td><?php echo $card['quantity']; ?></td>
+                </tr>
             
             <?php
           
