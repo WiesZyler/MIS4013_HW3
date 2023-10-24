@@ -25,7 +25,7 @@ foreach ($decks as $deck) {
              <td><?php echo $card['quantity']; ?></td>
             </li>
             <?php
-          }
+          
         } 
         ?>
   </tbody>
