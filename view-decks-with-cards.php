@@ -11,7 +11,6 @@ foreach ($decks as $deck) {
     <thead>
       <th>Card Number</th>
             <th>Card Name</th>
-            <th>Pack Name</th>
             <th> Quantity</th>
     </thead>
   <tbody>
