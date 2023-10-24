@@ -2,7 +2,7 @@
 function selectDecksWithCards($did) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT c.cardID, cardnumber, cardname, attribute, `spell/trap`, level, monstertype, rarity, cardtype, deckID, quantity FROM `card` c JOIN `card/deck` cd ON c.cardID = cd.cardID WHERE deckID = ?");
+        $stmt = $conn->prepare("SELECT c.cardID, cardnumber, cardname, attribute, `spell/trap`, level, monstertype, rarity, cardtype, deckID, quantity, carddeckID FROM `card` c JOIN `card/deck` cd ON c.cardID = cd.cardID WHERE deckID = ?");
         $stmt->bind_param("i", $did);
         $stmt->execute();
         $result = $stmt->get_result();
