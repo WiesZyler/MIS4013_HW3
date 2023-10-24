@@ -15,7 +15,7 @@ $cards = selectDecksWithCards($deck['deckID']);
     <li class="list-group-item">
     <div class="row">
       <div class="col">
-    <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?>  - <?php echo $card['quantity']; ?></li>
+    <?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?>  - <?php echo $card['quantity']; ?>
      </div>
       <div class="col-auto">
         <?php
@@ -35,6 +35,7 @@ $cards = selectDecksWithCards($deck['deckID']);
         </form>
       </div>
     </div>
+      </li>
 <?php
   }
 ?>
