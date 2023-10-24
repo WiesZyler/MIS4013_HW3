@@ -14,27 +14,21 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editCardModalLabel<?php echo $card['cardID'];?>">Edit a Card</h1>
+        <h1 class="modal-title fs-5" id="editCardModalLabel<?php echo $card['cardID'];?>">Edit Quantity</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
-                  <form method="post" action="">
+                  <form method="post" action="">         
                     <div class="mb-3">
-                      <label for="cNum<?php echo $card['cardID'];?>" class="form-label">Card Number</label>
-                      <input type="text" class="form-control" id="cNum<?php echo $card['cardID'];?>" name="cNum" value="<?php echo $card['cardnumber'];?>">
-                    </div>
-                    
-                    <div class="mb-3">
-                      <label for="cName<?php echo $card['cardID'];?>" class="form-label">Card Name</label>
-                      <input type="text" class="form-control" id="cName<?php echo $card['cardID'];?>" name="cName" value="<?php echo $card['cardname'];?>">
-                    </div>
-                  
-                    <div class="mb-3">
-                      <label for="cRarity<?php echo $card['cardID'];?>" class="form-label">Rarity</label>
+                      <label for="cRarity<?php echo $card['cardID'];?>" class="form-label">Quantity</label>
                       <input type="text" class="form-control" id="cRarity<?php echo $card['cardID'];?>"  name="cRarity" value="<?php echo $card['quantity'];?>">
                     </div>
+
+                   
                     <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
+                      <input type="hidden" name="cID" value="<?php echo $card['deckID'];?>">
+                      <input type="hidden" name="cID" value="<?php echo $card['carddeckID'];?>">
                     <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
