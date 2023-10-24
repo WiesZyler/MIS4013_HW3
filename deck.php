@@ -10,7 +10,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertCard($_POST['deckName'],$_POST['duelistName']))
+      if (insertDeck($_POST['deckName'],$_POST['duelistName']))
       {
        echo '<div class="alert alert-success" role="alert"> Deck Added! </div>';
           }
@@ -20,7 +20,7 @@ if (isset($_POST['actionType']))
       }
       break;
       case  "Delete":
-      if (deleteCard($_POST['dID']))
+      if (deleteDeck($_POST['dID']))
       {
        echo '<div class="alert alert-success" role="alert"> Deck Deleted</div>';
           }
@@ -30,7 +30,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editCard($_POST['deckName'],$_POST['duelistName'],$_POST['dID']))
+      if (editDeck($_POST['deckName'],$_POST['duelistName'],$_POST['dID']))
       {
        echo '<div class="alert alert-success" role="alert"> Deck Edited! </div>';
           }
