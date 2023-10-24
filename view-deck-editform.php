@@ -30,7 +30,7 @@
                       <input type="text" class="form-control" id="duelistName<?php echo $deck['deckID'];?>" name="duelistName" value="<?php echo $deck['duelistname'];?>">
                     </div>
 
-                    <input type="hidden" name="actionType" value="Add">
+                    <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
 
