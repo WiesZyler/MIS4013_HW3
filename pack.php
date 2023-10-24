@@ -5,11 +5,6 @@ require_once("model-pack.php");
 $PageTitle = "Packs";
 include "view-header.php";
 
-$packs = selectPack();
-include "view-pack.php";
-include "view-footer.php";
-
-
 if (isset($_POST['actionType']))
 {
   switch ($_POST['actionType'])
@@ -47,5 +42,10 @@ if (isset($_POST['actionType']))
     }
 
 }
+
+  $packs = selectPack();
+include "view-pack.php";
+include "view-footer.php";
+
 ?>
 
