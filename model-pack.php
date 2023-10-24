@@ -46,7 +46,7 @@ function deletePack($pID) {
     }
 }
 
-function editPack($pName,$pType,$rDate) {
+function editPack($pName,$pType,$rDate $pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `pack` SET `packname`=?, `packType`=?, `releasedate`=? WHERE `packID`=?");
@@ -60,6 +60,5 @@ function editPack($pName,$pType,$rDate) {
         throw $e;
     }
 }
-
 
 ?>
