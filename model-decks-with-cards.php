@@ -73,4 +73,32 @@ function editCard($cdQ, $cdID, $cID, $dID) {
         throw $e;
     }
 }
+
+function selectDecksforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT `deckID`, `deckname`, FROM `deck` Order by `deckname`");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectCardsforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT `cardID`, `cardnumber`, `cardname`, FROM `card` Order by `cardnumber`");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
