@@ -31,7 +31,7 @@ foreach ($decks as $deck) {
                <td><?php echo $card['cardnumber']; ?></td>
                <td><?php echo $card['cardname']; ?></td>
                <td><?php echo $packData['packname']; ?></td>
-             <td><?php echo $packData['quantity']; ?></td>
+             <td><?php echo $card['quantity']; ?></td>
             </li>
             <?php
           }
