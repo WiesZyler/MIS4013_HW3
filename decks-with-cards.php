@@ -10,7 +10,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertCard($_POST['cdID'], $_POST['cID'], $_POST['dID'], $_POST['quantity']))
+      if (insertCard($_POST['cID'], $_POST['dID'], $_POST['cdQ']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Added to Deck! </div>';
           }
