@@ -2,7 +2,7 @@
   <?php
 while ($deckItem = $deckList->fetch->fetch_assoc()){
   ?>
-<option value="<?php echo deckItem['deckID'];?>"><?php echo deckItem['deckName'];?></option>
+<option value="<?php echo deckItem['deckID'];?>"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</option>
 
   <?php
 }
