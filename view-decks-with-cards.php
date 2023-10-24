@@ -12,7 +12,7 @@ while ($deck = $decks->fetch_assoc()) {
 $cards = selectDecksWithCards($deck['deckID']);
   while ($card = $cards->fetch_assoc()) {
 ?>
-    <li class="list-group-item"><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?>  -<?php echo $card['quantity']; ?></li>
+    <li class="list-group-item"><?php echo $card['cardnumber']; ?> - <?php echo $card['cardname']; ?>  - <?php echo $card['quantity']; ?></li>
 <?php
   }
 ?>
