@@ -8,7 +8,7 @@ while ($deck = $decks->fetch_assoc())
 
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
+    
   <table class="table">
     <thead>
       <tr>
