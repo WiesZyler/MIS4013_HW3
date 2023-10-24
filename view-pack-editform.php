@@ -36,7 +36,7 @@
                     </div>
                     
                  
-                    <input type="hidden" name="actionType" value="Add">
+                    <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
 
