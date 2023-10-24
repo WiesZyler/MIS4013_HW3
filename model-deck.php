@@ -29,7 +29,7 @@ function insertDeck($deckName,$duelistName) {
     }
 }
 
-function deleteCard($dID) {
+function deleteDeck($dID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("Delete from deck where deckID=?");
@@ -43,7 +43,7 @@ function deleteCard($dID) {
     }
 }
 
-function editCard($deckName,$duelistName,$dID) {
+function editDeck($deckName,$duelistName,$dID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `deck` SET `deckname`=?, `duelistname`=? WHERE `deckID`=?");
