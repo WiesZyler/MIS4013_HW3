@@ -21,14 +21,14 @@
 
                   <form method="post" action="">         
                     <div class="mb-3">
-                      <label for="cRarity<?php echo $card['cardID'];?>" class="form-label">Quantity</label>
-                      <input type="text" class="form-control" id="cRarity<?php echo $card['cardID'];?>"  name="cRarity" value="<?php echo $card['quantity'];?>">
+                      <label for="cdQ<?php echo $card['cardID'];?>" class="form-label">Quantity</label>
+                      <input type="text" class="form-control" id="cdQ<?php echo $card['cardID'];?>"  name="cdQ" value="<?php echo $card['quantity'];?>">
                     </div>
 
                    
                     <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
                       <input type="hidden" name="dID" value="<?php echo $card['deckID'];?>">
-                   <input type="hidden" name="dID" value="<?php echo $card['carddeckID'];?>">
+                   <input type="hidden" name="cdID" value="<?php echo $card['carddeckID'];?>">
                     <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
