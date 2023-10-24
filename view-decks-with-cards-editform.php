@@ -28,6 +28,7 @@
                    
                     <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
                       <input type="hidden" name="dID" value="<?php echo $card['deckID'];?>">
+                   <input type="hidden" name="dID" value="<?php echo $card['carddeckID'];?>">
                     <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
