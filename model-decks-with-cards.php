@@ -30,3 +30,47 @@ function selectDeck() {
     }
 }
 ?>
+
+<?php
+function insertCard($cdID, $cID, $dID, $cdQ) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `carddeck` (`carddeckID`, `cardID`, `deckID`, `quantity`) VALUES (?, ?, ?, ?)");
+         $stmt->bind_param("iiii",$cdID, $cID, $dID, $cdQ);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteCard($cdID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("Delete from carddeck where carddeckID=?");
+         $stmt->bind_param("i", $cdID);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function editCard($cdQ, $cdID, $cID, $dID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `carddeck` SET `quantity`=?, WHERE `carddeckID`=? AND `cardID`=? AND `deckID`=?");
+        $stmt->bind_param("iiii", $cdQ, $cdID, $cID, $dID);  
+        $success = $stmt->execute();  
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+?>
