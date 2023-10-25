@@ -23,7 +23,7 @@
 
                    
                     <div class="mb-3">
-                      <label for="dID" class="form-label">Deck ID</label>
+                      <label for="dID" class="form-label">Deck</label>
                       <?php 
                       $deckList = selectDecksforInput();
                       include "view-deck-input-list.php"
