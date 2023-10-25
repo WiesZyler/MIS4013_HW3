@@ -22,7 +22,7 @@
 
 
                    <div class="mb-3">
-                      <label for="dID<?php echo $card['cardID'];?>" class="form-label">Deck</label>
+                      <label for="dID<?php echo $card['deckID'];?>" class="form-label">Deck</label>
                       <?php 
                       $deckList = selectDecksforInput();
                       $selectedDeck = $card['deckID'];
@@ -31,14 +31,14 @@
                     </div>
                     
                     <div class="mb-3">
-                      <label for="cID<?php echo $card['cardID'];?>" class="form-label">Card ID </label>
-                      <input type="text" class="form-control" id="cID<?php echo $card['cardID'];?>" name="cID" value="<?php echo $card['cardID'];?>">
+                      <label for="cID<?php echo $card['deckID'];?>" class="form-label">Card ID </label>
+                      <input type="text" class="form-control" id="cID<?php echo $card['deckID'];?>" name="cID" value="<?php echo $card['cardID'];?>">
                     </div>
        
                   <form method="post" action="">         
                     <div class="mb-3">
-                      <label for="cdQ<?php echo $card['cardID'];?>" class="form-label">Quantity</label>
-                      <input type="text" class="form-control" id="cdQ<?php echo $card['cardID'];?>"  name="cdQ" value="<?php echo $card['quantity'];?>">
+                      <label for="cdQ<?php echo $card['deckID'];?>" class="form-label">Quantity</label>
+                      <input type="text" class="form-control" id="cdQ<?php echo $card['deckID'];?>"  name="cdQ" value="<?php echo $card['quantity'];?>">
                     </div>
 
                    
