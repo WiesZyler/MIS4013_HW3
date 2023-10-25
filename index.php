@@ -22,11 +22,9 @@ include "view-header.php";
             <!-- Add deck information and images here -->
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Yu-Gi-Oh Database. All rights reserved.</p>
-    </footer>
+    
 </body>
-</html>
+
 
 <?php
 include "view-footer.php";
