@@ -14,7 +14,6 @@ include "view-decks-with-cards-newform.php";
 <?php
 while ($deck = $decks->fetch_assoc()) {
 ?>
-   <div class="col-auto">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title"><?php echo $deck['duelistname']; ?>'s <?php echo $deck['deckname']; ?> Deck</h5>
@@ -48,7 +47,6 @@ $cards = selectDecksWithCards($deck['deckID']);
       </div>
     </div>
       </li>
-        </div>
 <?php
   }
 ?>
