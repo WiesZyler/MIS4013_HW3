@@ -48,6 +48,7 @@ $cards = selectDecksWithCards($deck['deckID']);
       </div>
     </div>
       </li>
+        </div>
 <?php
   }
 ?>
