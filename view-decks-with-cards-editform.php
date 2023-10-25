@@ -19,6 +19,21 @@
       </div>
       <div class="modal-body">
 
+
+
+                   <div class="mb-3">
+                      <label for="dID" class="form-label">Deck</label>
+                      <?php 
+                      $deckList = selectDecksforInput();
+                      include "view-deck-input-list.php"
+                      ?>  
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="cID" class="form-label">Card ID </label>
+                      <input type="text" class="form-control" id="cID" name="cID">
+                    </div>
+       
                   <form method="post" action="">         
                     <div class="mb-3">
                       <label for="cdQ<?php echo $card['cardID'];?>" class="form-label">Quantity</label>
@@ -26,8 +41,7 @@
                     </div>
 
                    
-                    <input type="hidden" name="cID" value="<?php echo $card['cardID'];?>">
-                      <input type="hidden" name="dID" value="<?php echo $card['deckID'];?>">
+                    
                    <input type="hidden" name="cdID" value="<?php echo $card['carddeckID'];?>">
                     <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-primary">Submit</button>
