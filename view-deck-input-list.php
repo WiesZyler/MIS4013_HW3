@@ -1,4 +1,4 @@
-<select class="form-select" id="did" name="did">
+<select class="form-select" id="dID" name="dID">
   <?php
 while ($deckItem = $deckList->fetch_assoc()){
   $selText ="";
