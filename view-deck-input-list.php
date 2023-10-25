@@ -2,7 +2,7 @@
   <?php
 while ($deckItem = $deckList->fetch_assoc()){
   $selText ="";
-  if (selectedDeck == $deckItem['deckID'])
+  if ($selectedDeck == $deckItem['deckID'])
   {
     $selText = "Selected";
   }
