@@ -18,11 +18,11 @@ include "view-header.php";
     <main>
         <section class="featured-cards">
             <h2>Featured Cards</h2>
-            <!-- Add card images and information here -->
+            not yet implemented
         </section>
         <section class="popular-decks">
             <h2>Popular Decks</h2>
-            <!-- Add deck information and images here -->
+            not yet implemented
         </section>
     </main>
    <footer>Zyler Wies's Homework 4</footer> 
