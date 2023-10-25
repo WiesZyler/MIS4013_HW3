@@ -30,7 +30,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editCard($_POST['cdQ'], $_POST['cdID'], $_POST['cID'], $_POST['dID']))
+      if (editCard($_POST['dID'], $_POST['cID'], $_POST['cdQ'], $_POST['cdID']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Quantity Edited! </div>';
           }
