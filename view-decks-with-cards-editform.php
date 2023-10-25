@@ -30,7 +30,7 @@
                       ?>  
                     </div>
                     
-                    <<div class="mb-3">
+                    <div class="mb-3">
                       <label for="cID<?php echo $card['cardID'];?>" class="form-label">Card ID </label>
                       <input type="text" class="form-control" id="cID<?php echo $card['cardID'];?>" name="cID" value="<?php echo $card['cardID'];?>">
                     </div>
