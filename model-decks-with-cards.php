@@ -60,7 +60,7 @@ function deleteCard($cdID) {
     }
 }
 
-function editCard($cdQ, $cdID, $cID, $dID) {
+function editCard($cID, $dID, $cdQ, $cdID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `card/deck` SET  `deckID`=?, `cardID`=?, `quantity`=? WHERE `carddeckID`=?");
