@@ -26,6 +26,7 @@
                       <label for="dID" class="form-label">Deck</label>
                       <?php 
                       $deckList = selectDecksforInput();
+                      $selectedDeck =0;
                       include "view-deck-input-list.php"
                       ?>  
                     </div>
