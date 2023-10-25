@@ -9,8 +9,6 @@ include "view-decks-with-cards-newform.php";
   </div>
 </div>
 <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col-auto">
-  </div>
 <?php
 while ($deck = $decks->fetch_assoc()) {
 ?>
