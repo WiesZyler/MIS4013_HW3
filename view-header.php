@@ -30,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" href="deck.php">Deck</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="javascript.php">JavaScript</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="decks-with-cards.php">Decks With Cards</a>
         </li>
