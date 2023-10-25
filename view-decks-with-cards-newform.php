@@ -22,7 +22,7 @@
 
 <?php 
 $deckList = selectDecksForInput();
-include "view-deck-input.php"
+include "view-deck-input-list.php"
 ?>
                    
                     <div class="mb-3">
