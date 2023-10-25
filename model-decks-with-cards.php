@@ -60,11 +60,11 @@ function deleteCard($cdID) {
     }
 }
 
-function editCard($dID, $cID, $cdQ, $cdID) {
+function editCard($cdQ, $cdID, $cID, $dID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `card/deck` SET  `deckID`=?, `cardID`=?, `quantity`=? WHERE `carddeckID`=?");
-        $stmt->bind_param("iiii", $dID, $cID, $cdQ, $cdID, );  
+        $stmt = $conn->prepare("UPDATE `card/deck` SET `quantity`=? WHERE `carddeckID`=? AND `cardID`=? AND `deckID`=?");
+        $stmt->bind_param("iiii", $cdQ, $cdID, $cID, $dID);  
         $success = $stmt->execute();  
         $conn->close();
         return $success;
@@ -73,6 +73,7 @@ function editCard($dID, $cID, $cdQ, $cdID) {
         throw $e;
     }
 }
+
 
 function selectDecksforInput() {
     try {
