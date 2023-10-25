@@ -63,8 +63,8 @@ function deleteCard($cdID) {
 function editCard($cdQ, $cdID, $cID, $dID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `card/deck` SET `quantity`=?, `cardID`=?, `deckID`=? WHERE `carddeckID`=?");
-        $stmt->bind_param("iiii", $cdQ, $cdID, $cID, $dID);  
+        $stmt = $conn->prepare("UPDATE `card/deck` SET  `deckID`=?, `cardID`=?, `quantity`=? WHERE `carddeckID`=?");
+        $stmt->bind_param("iiii", $dID, $cID, $cdQ, $cdID, );  
         $success = $stmt->execute();  
         $conn->close();
         return $success;
