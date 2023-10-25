@@ -1,5 +1,6 @@
 <h1>All Decks With Cards</h1>
 <div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="col">
 <?php
 foreach ($decks as $deck) {
 ?>
@@ -32,4 +33,5 @@ foreach ($decks as $deck) {
 <?php
 } 
 ?>
+ </div>
 </div>
