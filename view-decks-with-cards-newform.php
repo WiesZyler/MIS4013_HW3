@@ -21,7 +21,7 @@
                   <form method="post" action="">
 
 <?php 
-$deckList = selectDecksForInput();
+$deckList = selectDecksforInput();
 include "view-deck-input-list.php"
 ?>
                    
