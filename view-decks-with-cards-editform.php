@@ -25,6 +25,7 @@
                       <label for="dID" class="form-label">Deck</label>
                       <?php 
                       $deckList = selectDecksforInput();
+                      $selectedDeck = $card['deckID'];
                       include "view-deck-input-list.php"
                       ?>  
                     </div>
