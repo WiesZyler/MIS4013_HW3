@@ -2,7 +2,7 @@
 $PageTitle = "Home";
 include "view-header.php";
 ?>
-    <h1>Homework 4</h1>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@ include "view-header.php";
             <!-- Add deck information and images here -->
         </section>
     </main>
-    
+   <footer>Zyler Wies's Homework 4</footer> 
 </body>
 
 
