@@ -8,7 +8,7 @@
 $cards = selectDecksWithCards($deck['deckID']);
   while ($card = $cards->fetch_assoc()) 
   {
-    include "card.php"
+    include "card.php";
 
   }
 ?>
