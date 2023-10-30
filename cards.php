@@ -46,8 +46,7 @@ if (isset($_POST['actionType']))
     }
 
 }
-include "view/footer.php";
 $cards = selectCard();
 include "view-card.php";
-include "view-footer.php";
+include "view/footer.php";
 ?>
