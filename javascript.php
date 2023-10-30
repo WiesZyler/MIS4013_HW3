@@ -1,6 +1,6 @@
 <?php
 $PageTitle = "Home";
-include "view-header.php";
+include "view/header.php";
 ?>
     
 <head>
@@ -10,5 +10,5 @@ include "view-header.php";
 
 </body>
 <?php
-include "view-footer.php";
+include "view/footer.php";
 ?>
