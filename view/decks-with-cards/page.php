@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "view-decks-with-cards-newform.php";
+include "new-form.php";
 ?>
   </div>
 </div>
