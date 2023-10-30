@@ -49,6 +49,6 @@ if (isset($_POST['actionType']))
 
 
 $decks = selectDeck();
-include "view-decks-with-cards.php";
-include "view-footer.php";
+include "view/decks-with-cards/page.php";
+include "view/footer.php";
 ?>
