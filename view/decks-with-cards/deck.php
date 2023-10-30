@@ -6,7 +6,8 @@
       <ul class="list-group">
 <?php
 $cards = selectDecksWithCards($deck['deckID']);
-  while ($card = $cards->fetch_assoc()) {
+  while ($card = $cards->fetch_assoc()) 
+  {
     include "card.php"
 
   }
