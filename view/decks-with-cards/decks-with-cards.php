@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require_once("util-db.php");
-require_once("model");
+require_once("model.php");
 
 $PageTitle = "Decks With Cards";
 include "view/header.php";
