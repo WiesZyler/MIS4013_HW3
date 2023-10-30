@@ -27,7 +27,7 @@
                       <?php 
                       $deckList = selectDecksforInput();
                       $selectedDeck = $card['deckID'];
-                      include "view-deck-input-list.php"
+                      include "deck-input-list.php"
                       ?>  
                     </div>
                     
