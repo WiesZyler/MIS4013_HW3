@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require_once("util-db.php");
-require_once("model.php");
+require_once("view/decks-with-cards/model.php");
 
 $PageTitle = "Decks With Cards";
 include "view/header.php";
@@ -49,6 +49,6 @@ if (isset($_POST['actionType']))
 
 
 $decks = selectDeck();
-include "page.php";
+include "view/decks-with-cards/page.php";
 include "view/footer.php";
 ?>
