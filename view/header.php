@@ -31,7 +31,7 @@
           <a class="nav-link" href="deck.php">Deck</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="decks-with-cards.php">Decks With Cards</a>
+          <a class="nav-link" href="view/decks-with-cards/page.php">Decks With Cards</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="javascript.php">JavaScript</a>
