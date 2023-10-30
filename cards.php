@@ -7,7 +7,7 @@ require_once("util-db.php");
 require_once("model-card.php");
 
 $PageTitle = "Cards";
-include "view-header.php";
+include "view/header.php";
 
 if (isset($_POST['actionType']))
 {
