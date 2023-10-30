@@ -28,7 +28,7 @@ $cards = selectDecksWithCards($deck['deckID']);
      </div>
       <div class="col-auto">
         <?php
-              include "view-decks-with-cards-editform.php";
+              include "edit-form.php";
       ?>
       </div>
       <div class="col-auto">
