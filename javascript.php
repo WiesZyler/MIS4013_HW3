@@ -30,7 +30,7 @@ include "view/header.php";
 <body>
 <div>
    <button id="btn" class="btn btn-primary">Click Here</button>
-    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center;">0-0</div>
+    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;">0-0</div>
     <script>
     
         "use strict";
