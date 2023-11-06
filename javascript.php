@@ -49,6 +49,18 @@ include "view/header.php";
 
         
             })
+               let exDiv = document.querySelector("#d1");
+               exDiv.addEventListener("hover", () => {
+
+            
+            let params = {
+                        targets: div,
+                        translateX: { value: 10, duration: 3000 }
+                         };
+                    anime(params);
+
+        
+            })
         }
         
     </script> 
