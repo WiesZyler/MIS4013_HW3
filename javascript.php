@@ -33,6 +33,7 @@ include "view/header.php";
       <button id="btn" class="btn btn-primary">Move</button>
       <button id="btn1" class="btn btn-success">Grow</button>
       <button id="btn2" class="btn btn-danger">Shrink</button>
+      <button id="btn3" class="btn btn-warning">Change Color</button>
       </div>
       <p>Hover over the block to rotate it!</p>
     <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;"></div>
@@ -80,6 +81,18 @@ include "view/header.php";
             h = h - 100;
            document.querySelector('#d1').style.width = w + 'px';
            document.querySelector('#d1').style.height = h + 'px';
+        })
+
+                let Btn3 = document.querySelector('#btn3');
+            Btn3.addEventListener("click", () => {
+            if (document.querySelector('#d1').style.backgroundColor === 'red') {
+            document.querySelector('#d1').style.backgroundColor = 'blue';
+            } else if (document.querySelector('#d1').style.backgroundColor === 'blue') {
+            document.querySelector('#d1').style.backgroundColor = 'red';
+            }
+                  
+           
+         
         })
       
         }
