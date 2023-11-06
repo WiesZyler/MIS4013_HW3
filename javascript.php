@@ -54,7 +54,7 @@ include "view/header.php";
 
             
             let params = {
-                        targets: div,
+                        targets: exDiv,
                         translateX: { value: 10, duration: 3000 }
                          };
                     anime(params);
