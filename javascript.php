@@ -55,7 +55,7 @@ include "view/header.php";
             
             let params = {
                         targets: exDiv,
-                        translateX: { value: 10, duration: 3000 }
+                        rotate: { value: 10, duration: 3000 }
                          };
                     anime(params);
 
