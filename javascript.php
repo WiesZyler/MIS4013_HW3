@@ -34,8 +34,8 @@ include "view/header.php";
       <button id="btn1" class="btn btn-success">Grow</button>
       <button id="btn2" class="btn btn-danger">Shrink</button>
       </div>
-      <p>Hover of the block to rotate it!</p>
-    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;">0-0</div>
+      <p>Hover over the block to rotate it!</p>
+    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;"></div>
     <script>
     
         "use strict";
