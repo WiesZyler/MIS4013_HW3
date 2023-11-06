@@ -50,7 +50,7 @@ include "view/header.php";
         
             })
                let exDiv = document.querySelector("#d1");
-               exDiv.addEventListener("hover", () => {
+               exDiv.addEventListener("mouseover", () => {
 
             
             let params = {
