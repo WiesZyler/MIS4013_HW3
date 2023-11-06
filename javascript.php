@@ -28,20 +28,22 @@ include "view/header.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
 </head>
 <body>
-<div>
+<div style="display:flex; flex-direction:column; justify-content:center; align-item:center;">
    <button id="btn" class="btn btn-primary">Click Here</button>
     <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid;">0-0</div>
     <script>
     
         "use strict";
         {
+            let x = 200
             let exBtn = document.querySelector('#btn');
             exBtn.addEventListener("click", () => {
 
+            x = x * -1;
             let div = document.querySelector("#d1");
             let params = {
                         targets: div,
-                        translateX: { value: 200, duration: 3000 }
+                        translateX: { value: x, duration: 3000 }
                          };
                     anime(params);
 
