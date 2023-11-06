@@ -49,13 +49,14 @@ include "view/header.php";
 
         
             })
+              let degree = 0
                let exDiv = document.querySelector("#d1");
                exDiv.addEventListener("mouseover", () => {
 
-            
+            degree = degree + 10;
             let params = {
                         targets: exDiv,
-                        rotate: { value: 10, duration: 3000 }
+                        rotate: { value: degree, duration: 3000 }
                          };
                     anime(params);
 
