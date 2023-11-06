@@ -8,8 +8,8 @@ include "view/header.php";
 </head>
 <body>
 <div>
-   <button id="btn">Click Here</button>
-    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid;></div>
+   <button id="btn" class="btn btn-primary">Click Here</button>
+    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid;>"</div>
     var g;
     <script>
         "use strict";
