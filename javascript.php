@@ -28,9 +28,9 @@ include "view/header.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
 </head>
 <body>
-<div style="display:flex; flex-direction:column; justify-content:center; align-item:center;">
+<div>
    <button id="btn" class="btn btn-primary">Click Here</button>
-    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid;">0-0</div>
+    <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center;">0-0</div>
     <script>
     
         "use strict";
