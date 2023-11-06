@@ -36,7 +36,7 @@ include "view/header.php";
         "use strict";
         {
             let exBtn = document.querySelector('#btn');
-            exBtn.AddEventListener("click", () => {
+            exBtn.addEventListener("click", () => {
 
             let div = document.querySelector("#d1");
             let params = {
