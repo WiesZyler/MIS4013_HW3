@@ -29,7 +29,7 @@ include "view/header.php";
 </head>
 <body>
 <div>
-   <button id="btn" class="btn btn-primary">Click Here</button>
+   <button id="btn" class="btn btn-primary">Move</button>
     <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;">0-0</div>
     <script>
     
