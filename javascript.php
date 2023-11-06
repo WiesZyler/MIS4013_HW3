@@ -29,7 +29,12 @@ include "view/header.php";
 </head>
 <body>
 <div>
-   <button id="btn" class="btn btn-primary">Move</button>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      <button id="btn" class="btn btn-primary">Move</button>
+      <button id="btn1" class="btn btn-success">Grow</button>
+      <button id="btn2" class="btn btn-danger">Shrink</button>
+      </div>
+      <p>Hover of the block to rotate it!</p>
     <div id="d1" style="width:100px; height:100px; background-color:red; border-style:solid; display:flex; flex-direction:column; justify-content:center; align-item:center; margin-left:auto; margin-right:auto;">0-0</div>
     <script>
     
@@ -59,9 +64,24 @@ include "view/header.php";
                         rotate: { value: degree, duration: 3000 }
                          };
                     anime(params);
-
-        
             })
+              let w = 100;
+              let h = 100;
+               let Btn1 = document.querySelector('#btn1');
+            Btn1.addEventListener("click", () => {
+            w = w + 100;
+            h = h + 100;
+           document.querySelector('#d1').style.width = w + 'px';
+           document.querySelector('#d1').style.height = h + 'px';
+        })
+               let Btn2 = document.querySelector('#btn2');
+            Btn2.addEventListener("click", () => {
+            w = w - 100;
+            h = h - 100;
+           document.querySelector('#d1').style.width = w + 'px';
+           document.querySelector('#d1').style.height = h + 'px';
+        })
+      
         }
         
     </script> 
