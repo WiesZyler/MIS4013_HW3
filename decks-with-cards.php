@@ -17,10 +17,28 @@ if (isset($_POST['actionType']))
       if (insertCard($_POST['cID'], $_POST['dID'], $_POST['cdQ']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Added to Deck! </div>';
+        ?>
+       <script>
+         Swal.fire({
+					title: "Success",
+					text: "Student Added Successfully!",
+					icon: "success",
+				});
+      </script>
+        <?php
           }
       else
       {
         echo '<div class="alert alert-danger" role="alert"> Error! Card Not Added to Deck! </div>';
+          ?>
+       <script>
+         Swal.fire({
+					title: "Error",
+					text: "Student Added Successfully!",
+					icon: "error",
+				});
+      </script>
+        <?php
       }
       break;
       case  "Delete":
