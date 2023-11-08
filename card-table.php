@@ -8,6 +8,7 @@ require_once("model-card.php");
 
 <?php
 function selectCard() {
+	$cards = [];
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT cardID, cardnumber, cardname, packID, attribute, `spell/trap`, level, monstertype, rarity, cardtype FROM `card`");
