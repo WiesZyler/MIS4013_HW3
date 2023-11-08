@@ -6,7 +6,7 @@ require_once("util-db.php");
 require_once("model-card.php");
 ?>
 
-?>
+
   </div>
 </div>
 <div id="table"></div>
