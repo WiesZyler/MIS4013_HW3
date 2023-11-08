@@ -1,6 +1,4 @@
 <?php
-require_once("util-db.php");
-require_once("model-card.php");
 $PageTitle = "Javascript";
 include "view/header.php";
 ?>
