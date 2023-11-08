@@ -37,20 +37,40 @@ if (isset($_POST['actionType']))
       if (deleteCard($_POST['cdID']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Deleted from Deck</div>';
+          ?>
+       <script>
+         Swal.fire({title: "Success", text: "Card Deleted!", icon: "success",});
+      </script>
+        <?php
           }
       else
       {
         echo '<div class="alert alert-danger" role="alert"> Error! Card Not Deleted from Deck! </div>';
+              ?>
+       <script>
+         Swal.fire({title: "Error", text: "Error Card Not Deleted!", icon: "error",});
+      </script>
+        <?php
       }
         break;
        case  "Edit":
       if (editCard($_POST['dID'], $_POST['cID'], $_POST['cdQ'], $_POST['cdID']))
       {
        echo '<div class="alert alert-success" role="alert"> Card Quantity Edited! </div>';
+            ?>
+       <script>
+         Swal.fire({title: "Success", text: "Card Edited!", icon: "success",});
+      </script>
+        <?php
           }
       else
       {
         echo '<div class="alert alert-danger" role="alert"> Error! Card Quantity Not Edited! </div>';
+           ?>
+       <script>
+         Swal.fire({title: "Error", text: "Error Card Not Edited!", icon: "error",});
+      </script>
+        <?php
       }
       break;
     }
