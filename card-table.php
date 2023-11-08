@@ -8,21 +8,26 @@ require_once("model-card.php");
 
 <?php
 function selectCard() {
-	$cards = [];
+    $cards = [];
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT cardID, cardnumber, cardname, packID, attribute, `spell/trap`, level, monstertype, rarity, cardtype FROM `card`");
         $stmt->execute();
         $result = $stmt->get_result();
-	    while ($row = $result->fetch_assoc()) {
+        
+        while ($row = $result->fetch_assoc()) {
             $cards[] = $row;
+        }
+        
         $conn->close();
+        
         return $cards; 
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
+
 ?>
 
   </div>
