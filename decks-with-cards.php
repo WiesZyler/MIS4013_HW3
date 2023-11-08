@@ -21,7 +21,7 @@ if (isset($_POST['actionType']))
        <script>
          Swal.fire({
 					title: "Success",
-					text: "Student Added Successfully!",
+					text: "Card Added!",
 					icon: "success",
 				});
       </script>
@@ -34,7 +34,7 @@ if (isset($_POST['actionType']))
        <script>
          Swal.fire({
 					title: "Error",
-					text: "Student Added Successfully!",
+					text: "Error Adding Card",
 					icon: "error",
 				});
       </script>
