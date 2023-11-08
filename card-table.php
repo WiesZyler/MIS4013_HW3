@@ -8,17 +8,13 @@ require_once("model-card.php");
 
   </div>
 </div>
-<div id="table"></div>
+<div id="table">e</div>
 	<script>
 		"use strict";
 		var grid = null; 
 		var g;
 
 		async function ShowTable() {
-			if (grid != null) {
-				grid.destroy
-			}
-
 			let table = document.querySelector("#table");
 			table.innerHTML = ""; 
 
