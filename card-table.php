@@ -7,7 +7,7 @@ require_once("model-card.php");
 ?>
 
 <?php
-function selectCard() {
+function selectCards() {
     $cards = [];
     try {
         $conn = get_db_connection();
@@ -46,7 +46,7 @@ function selectCard() {
 			let table = document.querySelector("#table");
 			table.innerHTML = ""; 
 
-			let r = await fetch(selectCard(), { cache: "no-store" });
+			let r = await fetch(selectCards(), { cache: "no-store" });
 			let rj = await r.json();
 
 			g = rj;
