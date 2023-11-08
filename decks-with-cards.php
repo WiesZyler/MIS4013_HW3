@@ -19,11 +19,7 @@ if (isset($_POST['actionType']))
        echo '<div class="alert alert-success" role="alert"> Card Added to Deck! </div>';
         ?>
        <script>
-         Swal.fire({
-					title: "Success",
-					text: "Card Added!",
-					icon: "success",
-				});
+         Swal.fire({title: "Success", text: "Card Added!", icon: "success",});
       </script>
         <?php
           }
@@ -32,11 +28,7 @@ if (isset($_POST['actionType']))
         echo '<div class="alert alert-danger" role="alert"> Error! Card Not Added to Deck! </div>';
           ?>
        <script>
-         Swal.fire({
-					title: "Error",
-					text: "Error Adding Card",
-					icon: "error",
-				});
+         Swal.fire({title: "Error", text: "Error Card Not Added!", icon: "error",});
       </script>
         <?php
       }
