@@ -1,40 +1,30 @@
-<?php 
-$PageTitle = "CardTable";
-include "view/header.php";
+async function ShowTable() {
+    if (grid != null) {
+        grid.destroy();
+    }
+    let table = document.querySelector("#table");
+    table.innerHTML = "";
 
-require_once("util-db.php");
-require_once("model-card.php");
-?>
+    try {
+        let r = await fetch("<?php echo selectCard(); ?>", { cache: "no-store" });
+        let rj = await r.json();
 
-  </div>
-</div>
-<div id="table"></div>
-	<script>
-		"use strict";
-		var grid = null; 
-		var g;
+        console.log("Fetched Data:", rj); // Log the fetched data to the console
 
-		async function ShowTable() {
-			if (grid != null) {
-				grid.destroy();
-			}
-			let table = document.querySelector("#table");
-			table.innerHTML = ""; 
+        let params = {
+            data: rj,
+            pagination: { limit: 10 },
+            search: true,
+            sort: true,
+            width: 600,
+            // columns: [{ id: "cardID", name: "Card ID" }, { id: "cardnumber", name: "Card Number" }, { id: "cardname", name: "Card Name" },{ id: "packID", name: "Pack ID" },]
+        }
 
-			let params = {
-				data: <?php echo selectCard() ?>,
-				pagination: { limit: 10, },
-				search: true,
-				sort: true,
-				width: 600,
-				//columns: [{ id: "cardID", name: "Card ID" }, { id: "cardnumber", name: "Card Number" }, { id: "cardname", name: "Card Name" },{ id: "packID", name: "Pack ID" },]
-			}
+        grid = new gridjs.Grid(params);
+        grid.render(table);
+    } catch (error) {
+        console.error("Error fetching data:", error); // Log any errors to the console
+    }
+}
 
-			grid = new gridjs.Grid(params);
-			grid.render(table);
-
-			
-		}
-		ShowTable();
-	</script>
-
+ShowTable();
