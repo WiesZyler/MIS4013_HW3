@@ -15,6 +15,9 @@ require_once("model-card.php");
 		var g;
 
 		async function ShowTable() {
+			if (grid != null) {
+				grid.destroy
+			}
 			let table = document.querySelector("#table");
 			table.innerHTML = ""; 
 
