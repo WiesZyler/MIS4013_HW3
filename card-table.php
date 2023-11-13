@@ -22,7 +22,7 @@ require_once("model-card.php");
 			table.innerHTML = ""; 
 
 			let params = {
-				data: [<?php echo selectCard() ?>],
+				data: <?php echo selectCard() ?>,
 				pagination: { limit: 10, },
 				search: true,
 				sort: true,
