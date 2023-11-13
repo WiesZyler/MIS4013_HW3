@@ -20,10 +20,14 @@ async function ShowTable() {
     table.innerHTML = "";
 
     try {
-        let r = await fetch("<?php echo selectCard(); ?>", { cache: "no-store" });
+        let r = await fetch("
+<?php
+$cards = selectCard(); 
+
+?>
+", { cache: "no-store" });
         let rj = await r.json();
 
-        console.log("Fetched Data:", rj); // Log the fetched data to the console
 
         let params = {
             data: rj,
@@ -36,9 +40,6 @@ async function ShowTable() {
 
         grid = new gridjs.Grid(params);
         grid.render(table);
-    } catch (error) {
-        console.error("Error fetching data:", error); // Log any errors to the console
-    }
 }
 
 ShowTable();
