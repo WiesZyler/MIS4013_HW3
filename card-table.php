@@ -1,3 +1,19 @@
+<?php 
+$PageTitle = "CardTable";
+include "view/header.php";
+
+require_once("util-db.php");
+require_once("model-card.php");
+?>
+
+  </div>
+</div>
+<div id="table"></div>
+	<script>
+		"use strict";
+		var grid = null; 
+		var g;
+
 async function ShowTable() {
     if (grid != null) {
         grid.destroy();
@@ -28,3 +44,5 @@ async function ShowTable() {
 }
 
 ShowTable();
+
+	</script>
