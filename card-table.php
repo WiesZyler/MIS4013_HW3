@@ -23,6 +23,12 @@ async function ShowTable() {
         let r = await fetch("
 <?php
 $cards = selectCard(); 
+while($card = $cards->fetch_assoc())
+{
+	echo $card['packID'];
+	echo $card['cardnumber'];
+	echo $card['cardname'];
+}
 
 ?>
 ", { cache: "no-store" });
