@@ -29,7 +29,7 @@ include "view/header.php";
 
             grid = new gridjs.Grid(params);
             grid.render(table);
-       
+        } 
     }
 
     ShowTable();
