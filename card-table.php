@@ -21,13 +21,8 @@ require_once("model-card.php");
 			let table = document.querySelector("#table");
 			table.innerHTML = ""; 
 
-			let r = await fetch(<?php echo selectCard() ?>, { cache: "no-store" });
-			let rj = await r.json();
-
-			g = rj;
-
 			let params = {
-				data: rj,
+				data: [<?php echo selectCard() ?>],
 				pagination: { limit: 10, },
 				search: true,
 				sort: true,
