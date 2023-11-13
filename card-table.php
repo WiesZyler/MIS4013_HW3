@@ -23,14 +23,15 @@ async function ShowTable() {
         let r = await fetch("
 <?php
 $cards = selectCard(); 
-while($card = $cards->fetch_assoc())
-{
-	echo $card['packID'];
-	echo $card['cardnumber'];
-	echo $card['cardname'];
+$cardData = array();
+
+while ($card = $cards->fetch_assoc()) {
+    $cardData[] = $card;
 }
 
+echo json_encode($cardData);
 ?>
+
 ", { cache: "no-store" });
         let rj = await r.json();
 
