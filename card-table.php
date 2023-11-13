@@ -18,7 +18,7 @@ require_once("model-card.php");
 			let table = document.querySelector("#table");
 			table.innerHTML = ""; 
 
-			let r = await fetch(selectCard(), { cache: "no-store" });
+			let r = await fetch(<?php selectCard() ?>, { cache: "no-store" });
 			let rj = await r.json();
 
 			g = rj;
@@ -29,7 +29,7 @@ require_once("model-card.php");
 				search: true,
 				sort: true,
 				width: 600,
-				columns: [{ id: "cardID", name: "Card ID" }, { id: "cardnumber", name: "Card Number" }, { id: "cardname", name: "Card Name" },{ id: "packID", name: "Pack ID" },]
+				//columns: [{ id: "cardID", name: "Card ID" }, { id: "cardnumber", name: "Card Number" }, { id: "cardname", name: "Card Name" },{ id: "packID", name: "Pack ID" },]
 			}
 
 			grid = new gridjs.Grid(params);
