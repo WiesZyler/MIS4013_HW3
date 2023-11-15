@@ -99,10 +99,10 @@ include "view/header.php";
         
     </script> 
 </div>
-<div style="Width:500px;">
+<div style="Width:500px;" id="chart">
       <script>
-            
-        new Chart(ctx, {
+            let r = document.querySelector("#chart")
+        new Chart(r, {
     type: 'pie',
     width:30,
     data: {
