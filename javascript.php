@@ -99,7 +99,7 @@ include "view/header.php";
         
     </script> 
 </div>
-<div style="Width:500px;">
+<div style="Width:500px; margin-top 100px;">
       <canvas  id="chart"></canvas>
       </div>
       <script>
@@ -124,6 +124,18 @@ include "view/header.php";
           });
           
       </script>
+
+      <p style="font-weight:bold;">Psst, Scroll all the away to the bottom, do it!</p>
+      <div id="elevator" class="elevator-button">
+        <p>↑</p>
+       </div>
+      <script>
+    var elevator = new Elevator({
+        element: document.querySelector('#elevator'),
+        mainAudio: 'path/to/elevator.mp3', // Optional: Specify a sound file
+        endAudio: 'path/to/ding.mp3' // Optional: Specify a sound file for the end
+    });
+</script>
 
 
 
