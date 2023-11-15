@@ -22,6 +22,8 @@
   <!-- Elevator.css -->
     <link rel="stylesheet" type="text/css" href="path/to/elevator.css">
     <script type="text/javascript" src="path/to/elevator.js"></script>
+    <script> import Elevator from 'elevator.js'; </script>
+    
     
     <!-- Map -->
     <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
