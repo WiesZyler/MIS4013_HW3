@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- Elevator.css -->
-    <script type="text/javascript" src="path/elevator.js"></script>
+    <script type="text/javascript" src="elevator.js"></script>
     <script> import Elevator from 'elevator.js'; </script>
     
     
