@@ -130,7 +130,7 @@ include "view/header.php";
     
       <p style="font-weight:bold;">Psst, Scroll all the away to the bottom, do it!</p>
       <div style="height:4000px;"></div>
-      <div id="elevator" class="elevator-button btn btn-primary" style="margin-right:auto; margin-left:auto;>
+      <div id="elevator" class="elevator-button btn btn-primary" style="margin-right:auto; margin-left:auto;">
         <p style="font-size: 40px;">Back to the Top</p>
        </div>
       <script>
