@@ -142,7 +142,7 @@ include "view/header.php";
         element: document.querySelector('#elevator'),
         mainAudio: 'elevator/elevator.mp3', // Optional: Specify a sound file
         endAudio: 'elevator/ding.mp3', // Optional: Specify a sound file for the end
-        duration: 40000,
+        duration: 45000,
     });
 </script>
 
