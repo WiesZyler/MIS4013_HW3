@@ -103,16 +103,14 @@ include "view/header.php";
       <canvas  id="chart"></canvas>
       </div>
       <script>
-            let r = document.querySelector("#chart")
+       document.addEventListener('DOMContentLoaded', function () {
+      let r = document.querySelector("#chart");
         new Chart(r, {
     type: 'pie',
-    width:30,
     data: {
     datasets: [{
         data: [10, 40, 15,15,10,10]
     }],
- 
-    
     labels: [
         'Purrely',
         'Rescue Ace',
@@ -120,7 +118,10 @@ include "view/header.php";
           'Unchained',
           'Kashtira',
           'Other',
-          
+      ],
+    },
+        });
+          });
           
       </script>
 
