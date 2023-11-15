@@ -28,6 +28,7 @@ include "view/header.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
 </head>
 <body>
+      <div></div>
 <div>
       <div class="btn-group" role="group" aria-label="Basic example">
       <button id="btn" class="btn btn-primary">Move</button>
@@ -142,7 +143,7 @@ include "view/header.php";
         element: document.querySelector('#elevator'),
         mainAudio: 'elevator/elevator.mp3', // Optional: Specify a sound file
         endAudio: 'elevator/ding.mp3', // Optional: Specify a sound file for the end
-        duration: 10000,
+        duration: 30000,
     });
 </script>
 
