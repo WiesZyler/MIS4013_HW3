@@ -21,7 +21,7 @@
 
   <!-- Elevator.css -->
     <script type="text/javascript" src="elevator.js"></script>
-    <script type="module" src="your-script.js"></script>
+    <script type="module" src="elevator.js"></script>
     
     
     <!-- Map -->
