@@ -130,7 +130,7 @@ include "view/header.php";
         <p>↑</p>
        </div>
       <script>
-             import Elevator from 'elevator.js';
+          
     var elevator = new Elevator({
         element: document.querySelector('#elevator'),
         mainAudio: 'path/to/elevator.mp3', // Optional: Specify a sound file
