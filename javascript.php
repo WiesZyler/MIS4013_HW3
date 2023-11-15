@@ -99,6 +99,29 @@ include "view/header.php";
         
     </script> 
 </div>
+<div style="Width:500px;">
+      <script>
+            
+        new Chart(ctx, {
+    type: 'pie',
+    width:30,
+    data: {
+    datasets: [{
+        data: [10, 40, 15,15,10,10]
+    }],
+ 
+    
+    labels: [
+        'Purrely',
+        'Rescue Ace',
+          'Tearlament',
+          'Unchained',
+          'Kashtira',
+          'Other',
+          
+          
+      </script>
+</div>
 
 
 </body>
