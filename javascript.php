@@ -126,6 +126,7 @@ include "view/header.php";
       </script>
     
       <p style="font-weight:bold;">Psst, Scroll all the away to the bottom, do it!</p>
+      <div style="height:4000px;"></div>
       <div id="elevator" class="elevator-button">
         <p>↑</p>
        </div>
