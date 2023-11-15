@@ -135,7 +135,7 @@ include "view/header.php";
     var elevator = new Elevator({
         element: document.querySelector('#elevator'),
         mainAudio: 'elevator/elevator.mp3', // Optional: Specify a sound file
-        endAudio: 'elevator/ding.mp3' // Optional: Specify a sound file for the end
+        endAudio: 'elevator/ding.mp3', // Optional: Specify a sound file for the end
         duration: 5000,
     });
 </script>
