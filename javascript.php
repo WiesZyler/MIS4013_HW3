@@ -124,12 +124,13 @@ include "view/header.php";
           });
           
       </script>
-     import Elevator from './path/to/elevator.js';
+    
       <p style="font-weight:bold;">Psst, Scroll all the away to the bottom, do it!</p>
       <div id="elevator" class="elevator-button">
         <p>↑</p>
        </div>
       <script>
+             import Elevator from 'elevator.js';
     var elevator = new Elevator({
         element: document.querySelector('#elevator'),
         mainAudio: 'path/to/elevator.mp3', // Optional: Specify a sound file
