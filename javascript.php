@@ -99,7 +99,9 @@ include "view/header.php";
         
     </script> 
 </div>
-<div style="Width:500px;" id="chart">
+<div style="Width:500px;">
+      <canvas  id="chart"></canvas>
+      </div>
       <script>
             let r = document.querySelector("#chart")
         new Chart(r, {
@@ -121,7 +123,7 @@ include "view/header.php";
           
           
       </script>
-</div>
+
 
 
 </body>
