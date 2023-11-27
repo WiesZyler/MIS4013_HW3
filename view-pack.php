@@ -66,3 +66,7 @@ include "view-pack-editform.php"
     </tbody>
   </table>
 </div>
+<div ref={wrapperRef} />
+    </>
+  );
+}
