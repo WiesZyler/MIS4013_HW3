@@ -20,7 +20,7 @@ function insertPack($pID,$pName,$pType,$rDate) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `pack` (`packID`, `packname`, `packType`, `releasedate`) VALUES (?, ?, ?, ?)");
-         $stmt->bind_param("sss",$pID,$pName,$pType,$rDate);
+         $stmt->bind_param("ssss",$pID,$pName,$pType,$rDate);
       $success =  $stmt->execute();
 
         $conn->close();
@@ -50,7 +50,7 @@ function editPack($pName,$pType,$rDate,$pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `pack` SET `packname`=?, `packType`=?, `releasedate`=? WHERE `packID`=?");
-         $stmt->bind_param("sss",$pName,$pType,$rDate,$pID);
+         $stmt->bind_param("ssss",$pName,$pType,$rDate,$pID);
       $success =  $stmt->execute();
 
         $conn->close();
